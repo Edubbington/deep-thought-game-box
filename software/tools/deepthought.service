@@ -1,0 +1,16 @@
+[Unit]
+Description=Deep Thought game night box
+After=network.target sound.target
+
+[Service]
+User=USERNAME
+WorkingDirectory=/home/USERNAME/deepthought
+Environment=SDL_VIDEODRIVER=kmsdrm
+Environment=SDL_RENDER_DRIVER=opengles2
+Environment=SDL_FRAMEBUFFER_ACCELERATION=opengles2
+ExecStart=/usr/bin/python3 /home/USERNAME/deepthought/run.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

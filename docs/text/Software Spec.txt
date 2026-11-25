@@ -1,0 +1,1407 @@
+Deep Thought — Software Spec
+
+
+
+
+  Deep Thought — Software Spec
+    Nov 16, 2026 · ​@Ethan I
+
+
+
+  1 — What it is and what it can do
+  Deep Thought is a Python program that runs at boot on the Pi 2 inside the printed body. It
+  owns the 5" touchscreen, the one big arcade button on the base, the LED ring in the
+  dome, the speaker and the mic. It has one job with four faces: be the game night's referee,
+  teacher, encyclopedia and voice, in the character of a planet-sized intellect mildly put out
+  at being asked.
+
+  The one button. The touchscreen does everything, but dice hands and a 5" screen don't
+  mix mid-game, so the button covers the three things players do constantly: short press =
+  Next (advance the phase / step / activation), hold = talk (push-to-talk to ask a question;
+  release to send), double-tap = Undo (step back one event). Its LED glows steadily, pulses
+  when it is the player's move, and goes bright while listening.
+
+  Encyclopedia — "ask it anything Warhammer"
+
+         Factions and armies: who they are, how they play, what a beginner should know (every
+         40k faction, every Kill Team team — the roster from the Knowledge Base).
+         Lore: the setting, the big events, the characters, the planets — answered in Deep
+         Thought's voice, short by default, longer on request.
+         Rules concepts: what a term means, how a mechanic works, in plain language (the
+         glossary and concept chunks from the Knowledge Base).
+         Units and models: what a unit is for and how it plays — but never its stats; those are on
+         the datasheet, and the box says so.
+         Browsable on the touchscreen (search box, faction tree, A–Z) or asked aloud through
+         the mic.
+         Works offline for everything in the local database; falls through to the cloud for the
+         long tail, and caches the answer so the second ask is free and instant.
+
+  Teacher — "teach us to play"
+
+         Teach mode runs the first-game scripts (Kill Team first, then 40k Combat Patrol): the
+         box narrates each step, shows the step on screen, explains each rule the first time it is
+         needed, and waits for the players to say Next.
+
+
+
+
+                                                                                             Page 1 of 29
+Deep Thought — Software Spec
+
+
+
+
+         Just-in-time rules: the first time a player shoots, charges, is injured, runs out of
+         activations, etc., the box explains that rule once and never again that game.
+         Rules lookup at any moment: press Ask, say "what does Lethal 5+ mean", get the
+         answer in three seconds from the local glossary; harder questions go to the cloud.
+         Worked examples on screen: the hit → wound → save → damage loop, the Kill Team
+         block table, the strength-vs-toughness chart — as always-available reference cards.
+
+  Referee — "run the game"
+
+         Tracks the whole game state: players, battle round / turning point, phase, whose
+         activation or turn, command points for both sides, victory points by category
+         (Crit/Tac/Kill op; primary/secondary), units destroyed, time per turn.
+         Announces every phase and prompts the right thing at the right time ("Command
+         phase: gain a CP, then score" / "Order? Action?").
+         Enforces the bookkeeping rules players forget: scoring caps, CP gain per turning
+         point, the no-score-in-TP1 rule, kill grades, primary-op bonus maths.
+         Big-number scoreboard on the touchscreen and on the Chromebook across the table
+         (any browser on the Wi-Fi).
+         Event log: every score, kill and phase change with a timestamp, so a disputed point
+         can be rewound (double-tap the button, or Undo on screen) and the game can be
+         reviewed afterwards.
+         Timers: a soft per-turn clock with Deep Thought's remarks when it runs long.
+         Modes: Teach (full narration), Reminder (phase prompts and tracking only), Silent
+         scorer (screen only).
+
+  Voice — "the Deep Thought personality"
+
+         Every announcement, prompt and remark is spoken in the persona from Part 1 of the
+         Knowledge Base, from a bank of pre-recorded lines with several variants per moment,
+         so it never repeats itself within a game.
+         New lines for unusual moments are written in-voice by the cloud, spoken, and cached.
+         Hold the button to talk: the box listens while it is held, answers aloud and on screen
+         when released.
+         The dome ring is the box's "face": colour = round, pulse = active player, a flare for big
+         rolls, a slow breathe when idle.
+
+  Extras
+
+
+
+
+                                                                                                Page 2 of 29
+Deep Thought — Software Spec
+
+
+
+
+         Dice roller (on screen, with Deep Thought's commentary) for when someone forgot
+         theirs.
+         Initiative / roll-off helper.
+         Session history: last ten games, who won, final scores.
+         Settings: player names, volume, brightness, Wi-Fi, persona verbosity (chatty / normal /
+         terse), cloud on/off.
+         Room for D&D (initiative tracker, condition reminders, rules lookup) and Magic (life
+         totals, turn structure) as further game plugins — same engine, same voice.
+
+
+  2 — Hardware reality and the rules it forces
+  The Pi 2 Model B is a 900 MHz quad-core 32-bit ARM with 1 GB of RAM, no GPU
+  acceleration worth using from Python, and a 16 GB SD card. It can run a snappy
+  touchscreen app, play audio, drive LEDs and talk to the network. It cannot run a language
+  model, a speech recogniser of any quality, or a browser-based UI at a tolerable frame rate.
+  Every design choice below follows from that.
+
+
+    Need                           Runs on the Pi      Runs in the   Why
+                                                       cloud
+
+    Touchscreen UI                 Yes (pygame,        —             A browser/Electron UI
+                                   800×480)                          would crawl; pygame draws
+                                                                     a full screen in a few ms
+
+    Game state, scoring,           Yes                 —             Trivial CPU
+    timers
+
+    Narration playback             Yes (pre-made       —             Playing audio is cheap
+                                   OGG files)
+
+    Narration generation           No                  Yes, ahead    Good TTS needs a real CPU;
+    (text-to-speech)                                   of time       the Pi just plays the result
+
+    Lines bank, teach              Yes (local          —             A few MB; instant
+    scripts, glossary,             JSON/SQLite)
+    roster
+
+    Encyclopedia — local           Yes (SQLite full-   —             Thousands of entries search
+    entries                        text search)                      in milliseconds
+
+
+
+
+                                                                                              Page 3 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Need                        Runs on the Pi       Runs in the     Why
+                                                     cloud
+
+    Encyclopedia — open         No                   Yes (Claude     Needs a language model
+    questions, lore depth                            API)
+
+    New in-voice lines          No                   Yes             Needs a language model
+
+    Speech-to-text (the         Not usefully         Yes (cloud      Offline models on a Pi 2 are
+    mic)                                             STT)            slow and poor; push-to-talk
+                                                                     audio is small to upload
+
+    Text-to-speech for          No                   Yes, then       Same as narration
+    cloud answers                                    cached
+                                                     locally
+
+    Chromebook                  Yes (tiny web        —               Serving one static page is
+    scoreboard                  server)                              nothing
+
+
+  Design rules that follow:
+
+     1. Offline first. Everything a game night needs works with the Wi-Fi down: tracking,
+        teaching, the lines bank, the local encyclopedia. The cloud adds depth; it is never on
+         the critical path. If the network is gone, the Ask button says so in character and falls
+         back to local search.
+     2. Pre-generate, then play. All known speech is made once (on your PC, by a script) and
+         shipped as files. The Pi never synthesises speech.
+     3. Cache everything from the cloud. Every answer and every generated line is stored by
+         a hash of its request. Game night two is cheaper than game night one; by game night
+         ten most questions never leave the box.
+     4. One process, one loop. A single Python process with a 30 fps UI loop and a few
+         background threads (audio, buttons, LEDs, network). No services talking over
+         sockets, no containers; simple to debug over SSH.
+     5. Budget: UI frame under 20 ms; button-to-sound under 150 ms; local lookup under 300
+        ms; cloud answer 3–6 s with a "thinking" cue on the dome so the wait reads as
+         character, not lag. RAM under 300 MB total.
+     6. Degrade in character. Every failure mode (no Wi-Fi, no cloud key, mic missing, SD full)
+        has a Deep Thought line and a screen message, never a traceback on the display.
+
+
+
+
+                                                                                              Page 4 of 29
+Deep Thought — Software Spec
+
+
+
+
+  3 — Architecture
+
+
+
+
+  process layout · 8 modules on the Pi, 5 things outside it
+
+  One Python 3 process, started by systemd at boot, owning the screen. The game engine
+  is the centre: it holds the session and emits events ( phase_start , activation , score ,
+   kill , big_roll , timer_warn , game_over ). Everything else either feeds it (UI, button,
+  plugins) or reacts to it (persona picks a line and plays it; the ring changes colour; the
+  scoreboard server publishes the new state). No module calls the cloud except the cloud
+  client, and nothing waits on it: a cloud request runs on a thread and posts a cloud_answer
+  event when done.
+
+  Module list (one Python package, deepthought/ ):
+
+
+    Module                            Responsibility             Notes
+
+     main.py                          Boot, load config, start   SDL_VIDEODRIVER=kmsdrm , no
+                                      threads, run the UI loop   X11
+
+
+
+
+                                                                                              Page 5 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Module                     Responsibility                     Notes
+
+     ui/                       Screens (one class each),          pygame; 800×480; touch =
+                               widgets (big buttons, number       mouse
+                               tiles, list, keyboard), theme
+
+     engine/session.py         Session state, event log, undo     JSON snapshot after every
+                               stack, persistence                 event
+
+     engine/events.py          Event bus (thread-safe             One consumer: the UI loop;
+                               queue)                             fan-out inside
+
+     games/base.py             Plugin interface: phases() ,
+                               on_event() , score_caps() ,
+                               teach_script() , prompts()
+
+     games/killteam/ ,         The two launch plugins             Each ships its own data/
+     games/wh40k/
+
+     persona/lines.py          Line bank, variant rotation,
+                               register (teach/normal/terse)
+
+     persona/speaker.py        Audio queue, OGG playback,         pygame.mixer
+                               ducking, interrupt
+
+     knowledge/db.py           SQLite + FTS5: glossary,           knowledge.db built on the PC
+                               concepts, roster,
+                               encyclopedia, answer cache
+
+     knowledge/ask.py          The query pipeline: local-first,   Returns text + optional audio
+                               cloud-fallback, cache              path
+
+     hw/button.py              GPIO 17, debounce, press /         gpiozero
+                               hold (>600 ms) / double (<350
+                               ms) classifier
+
+     hw/ring.py                16-LED ring on SPI, animation      neopixel_spi
+                               thread, named behaviours
+
+     hw/mic.py                 Push-to-talk capture to WAV        arecord subprocess
+                               (16 kHz mono)
+
+     hw/power.py               Safe shutdown on long-hold-        vcgencmd
+                               at-home, low-voltage warning
+
+
+
+
+                                                                                               Page 6 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Module                          Responsibility                        Notes
+
+     cloud/client.py                STT, Claude, TTS calls; retries,      requests ; keys in
+                                    timeouts, spend cap                   config.toml
+
+     web/server.py                  Flask on :8080: / ,                   Thread; read-only
+                                     /state.json
+
+     tools/ (PC side)                build_knowledge.py (KB               Run on your PC, not the Pi
+                                    doc → db), build_audio.py
+                                    (lines → OGG), sync.sh
+                                    (rsync to the Pi)
+
+
+  State machine (top level): BOOT → HOME → PICK_GAME → SETUP → PLAY ↔ (LOOKUP |
+  ENCYCLOPEDIA | SCOREBOARD) → GAME_OVER → HOME , with SETTINGS and DICE reachable
+  from HOME and PLAY. Inside PLAY the plugin owns a second machine (round → phase →
+  step). The UI shows whichever screen matches the state; the button's meaning is set per
+  state (Section 9).
+
+  Threads: UI loop (main), audio, button, ring, mic, cloud worker, web server. All
+  communicate through the event queue; shared state is the session object behind a lock,
+  written only by the engine.
+
+
+  4 — Screens
+  800 × 480 is small and the table is dim, so every screen follows the same rules: dark
+  background, one dominant element, touch targets at least 64 px, text no smaller than 22
+  px, and the current round/phase always visible in a strip across the top. A "Deep Thought
+  is speaking" indicator (three slow dots) appears in the strip while audio plays.
+
+
+    Screen                     What it shows                 Touch actions        Button does
+
+    Boot                       The dome breathes; a          —                    —
+                               one-line status
+                               ("Waking", "Wi-Fi",
+                               "Ready")
+
+    Home                       Big tiles: Play,              Tap a tile           Press = Play; hold = ask
+                               Encyclopedia, Dice,                                anything; 5 s hold =
+                               Settings; last game's                              shutdown prompt
+                               result as a footnote
+
+
+
+                                                                                                       Page 7 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Screen                     What it shows                   Touch actions    Button does
+
+    Pick game                  Kill Team · Warhammer           Tap              Press = confirm
+                               40,000 · (D&D · Magic                            highlighted
+                               greyed until built)
+
+    Setup                      Player names (two name          Tap, on-screen   Press = Start
+                               tiles, tap to pick from         keyboard
+                               recent names or type),
+                               mode (Teach / Reminder /
+                               Silent), game length
+                               (tutorial-short / full), per-
+                               game options (KT:
+                               mission type, Tac Ops
+                               on/off; 40k: game size,
+                               secondaries on/off)
+
+    Play — main                Top strip: game, round N        Tap any          Press = Next; hold =
+                               of M, phase, whose turn.                         ask; double = Undo
+                               Centre: the phase's
+                               prompt in large type
+                               ("Strategy phase — roll
+                               initiative") and the one or
+                               two numbers that matter
+                               now (CP for both;
+                               activations left). Bottom
+                               row: big buttons for the
+                               common events this
+                               phase: Next, Score, Unit
+                               down, Undo, Lookup
+
+    Play — scoreboard          Full-screen score: both         Tap, ±           Press = back to main
+                               players, VP by category
+                               with caps shown as "4 /
+                               6", CP, kills. Tap a number
+                               to adjust ± with
+                               confirmation
+
+
+
+
+                                                                                                   Page 8 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Screen                     What it shows                 Touch actions   Button does
+
+    Play — score sheet         The round's scoring           Tap rows        Press = Done
+    (end of round)             checklist for this game:
+                               each scorable item as a
+                               row with a tap-to-award
+                               control; shows the cap
+                               and what's already
+                               banked; a Done button
+
+    Play — unit down           Pick which side lost a        Tap             Press = confirm
+                               unit/operative; for KT it
+                               updates the kill-grade
+                               bar
+
+    Teach step                 The step's title, 2–4 lines   Tap Next /      Press = Next
+                               of text, an optional          Back / "say
+                               reference card (e.g. the      again"
+                               block table), and a Next
+                               arrow. Deep Thought
+                               reads it aloud
+
+    Lookup                     A search box with on-         Tap, type       Hold = ask by voice
+                               screen keyboard,                              instead
+                               suggested terms for the
+                               current phase, and the
+                               answer card: term, plain-
+                               English definition, "read
+                               aloud" button, "ask the
+                               cloud for more"
+
+    Ask (listening)            Full-screen "Listening…"      Tap to cancel   Release = send
+                               with a level meter, then
+                               "Thinking…" with the
+                               dome in thinking-colour,
+                               then the answer card
+
+
+
+
+                                                                                                   Page 9 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Screen                     What it shows               Touch actions    Button does
+
+    Encyclopedia               Three tabs: Factions        Tap, scroll,     Hold = ask
+                               (tree: Imperium / Chaos /   type
+                               Xenos → faction →
+                               overview, playstyle,
+                               beginner notes, units),
+                               Kill Teams (the roster,
+                               filterable by the three
+                               questions), Lore (A–Z
+                               and search). Each entry:
+                               short text, "read aloud",
+                               "more" (cloud)
+
+    Reference cards            A swipeable set: KT         Swipe            Press = close
+                               shooting steps, KT block
+                               table, KT fight sequence,
+                               40k wound chart, 40k
+                               phase order, both games'
+                               scoring summary
+
+    Dice                       Roll N D6 (and D3/D20       Tap N, Roll      Press = roll
+                               for later games), results
+                               sorted, criticals
+                               highlighted, Deep
+                               Thought comments
+
+    Game over                  Final score, winner,        Tap              Press = Home
+                               duration, a Deep Thought
+                               closing line; Save / New
+                               game / Home
+
+    History                    Last ten games              Tap to see the   —
+                                                           score sheet
+
+    Settings                   Volume, screen              Tap              —
+                               brightness, persona
+                               verbosity, Wi-Fi status,
+                               cloud on/off and spend
+                               this month, update data
+                               from PC, shutdown
+
+
+
+
+                                                                                            Page 10 of 29
+Deep Thought — Software Spec
+
+
+
+
+  Teach mode overlays. In Teach mode the Play screen gets a thin "i" ribbon at the right
+  edge; any just-in-time rule appears there as a card that Deep Thought reads, with a "got it"
+  button, so the game screen is never replaced mid-activation.
+
+
+  5 — Game engine and plugins
+  The session is one JSON-serialisable object, saved after every event so a power cut mid-
+  game loses nothing:
+
+     session = {
+       game: "killteam", mode: "reminder", started: "2026-11-21T19:10",
+         players: [{name: "Ethan", side: 0}, {name: "Trevor", side: 1}],
+         round: 2, round_max: 4, phase: "firefight", active_side: 1,
+         cp: [3, 4],
+         vp: [{crit: 2, tac: 0, kill: 1, primary: "crit"}, {crit: 1, tac: 2, kill:
+     0, primary: "tac"}],
+       units: [{start: 6, lost: 1}, {start: 6, lost: 2}],
+         activations_left: [3, 2],
+         flags: {taught: ["shoot", "charge"], tp1_no_crit_warned: true},
+         log: [{t: 812.4, ev: "score", side: 0, cat: "crit", delta: 1}, ...]
+     }
+
+
+  Undo pops the last log entry and replays the log from the last snapshot (snapshots every
+  25 events), so any state is reconstructible and nothing is ever edited in place.
+
+  Plugin interface ( games/base.py ). A game is a class with:
+
+          phases(session) → the ordered phase list for the current round, each with {id,
+         name, prompt_line, screen_numbers, buttons, auto_events} .
+
+          on_event(session, event) → applies game rules: CP gain at phase start, scoring
+         caps, kill-grade thresholds, the "no Crit Op in TP1" rule, end-of-game bonus maths.
+         Returns follow-up events (e.g. score → score_capped if at cap).
+          score_sheet(session) → the rows the end-of-round sheet shows and their caps.
+
+          teach_script() → the ordered steps (Section 6) and the just-in-time trigger map.
+          lines() → game-specific line moments on top of the shared persona bank ("Turning
+         point two" vs "Battle round two").
+          ring_scheme() → round colours and the pulse rule.
+
+
+
+
+                                                                                          Page 11 of 29
+Deep Thought — Software Spec
+
+
+
+
+  Kill Team plugin ( games/killteam/ ): rounds = 4 turning points (2 in tutorial length);
+  phases = Strategy (initiative roll-off, CP gain 1/1 in TP1 then 1 for initiative holder and 2 for
+  the other, ready-up, ploys) → Firefight (alternating activations; the engine counts
+  activations per side from the roster size, prompts Order? Action? in Teach, flags
+  counteract when one side is out) → End (score sheet: Crit Op per mission card up to 6, Tac
+  Op up to 6 once revealed, Kill Op by kill grades up to 6). Game over: primary-op bonus =
+  ceil(score on primary / 2), max 3. Missions: the box stores only shape ("score for holding",
+  "score for actions") and the per-round cap; the specific Crit Op card is the players'.
+
+  40k plugin ( games/wh40k/ ): rounds = 5 battle rounds (3 in tutorial), two turns per round;
+  phases per turn = Command (both gain 1 CP; battle-shock prompt for units under half;
+  scoring prompt from round 2) → Movement → Shooting → Charge → Fight (with the "who
+  fights next" alternation prompt) → end of turn. Score sheet: primary per the mission's cap,
+  secondaries as free-text rows with their caps (drawn from a small table of the common
+  2026–27 secondaries, editable), end-of-game points. Game sizes set the point budget
+  shown on the Setup screen for reference only.
+
+  Timers: per-turn and per-activation clocks run silently; at a configurable threshold
+  (default 4 min per 40k phase, 90 s per KT activation) Deep Thought gets one dry line, then
+  stays quiet.
+
+  Validation the engine enforces (so the box never shows an impossible score): category
+  caps, max CP (none in KT; 40k none but warns above 12), kills ≤ starting units, round ≤
+  max, no scoring events in a phase that doesn't score. Anything else is the players'
+  business.
+
+
+  6 — Teach mode and rules lookup
+  Teach scripts are the Part 4 / Part 8 tables from the Knowledge Base as data: teach.json
+  per game, an ordered list of steps {id, title, text, line_id, card, wait_for} .
+   wait_for is next (button or tap) or an event name. The engine runs the script as a
+  cursor over the list; the Play screen keeps working underneath, so a Teach game is a
+  tracked game — scores and phases are real.
+
+  Just-in-time rules are a map trigger → step_id in the same file: first_shoot ,
+   first_charge , first_fight , first_injury , out_of_activations , first_cp_spend ,
+   first_battle_shock , first_fall_back , first_advance , round_2_scoring … Each
+  fires once per session (tracked in session.flags.taught ), shows the card in the "i"
+  ribbon, and reads it aloud. In Reminder mode they do not fire, but the same cards are one
+  tap away under Lookup.
+
+
+                                                                                              Page 12 of 29
+Deep Thought — Software Spec
+
+
+
+
+  Who tells the box the player shot? Mostly the players, through the bottom-row event
+  buttons (Shoot, Charge, Fight, Unit down, Score) — in Teach mode these are prominent
+  and the box asks "what are you doing?" after each activation starts; in Reminder mode
+  only Score, Unit down and Next remain. This is deliberate: a tabletop box cannot see the
+  table, so the players narrate the one word that matters and get a rule back.
+
+  Rules lookup pipeline ( knowledge/ask.py ), same path whether the question is typed or
+  spoken:
+
+     1. Normalise: lowercase, strip filler ("what does", "mean"), expand known aliases ("KT" →
+        Kill Team, "TP" → turning point, "invuln" → invulnerable save).
+     2. Exact term match in the glossary (both games, current game first). Hit → answer in ≤
+        300 ms.
+     3. Full-text search over concepts + encyclopedia with FTS5, ranked; if the top hit scores
+        above a threshold, show it with its heading as the answer and a "more" button.
+     4. Answer cache: hash of the normalised question → a previous cloud answer, if any.
+     5. Cloud (if enabled and online): send the question, the current game and phase, the top
+         three local hits as context, and voice.txt ; get back a short answer in Deep
+         Thought's voice; TTS it; cache text + audio. If offline: "That requires a thought larger
+         than this room. Read me the card, or ask again when the network returns."
+     6. Guardrail: every cloud answer about a specific unit, weapon or card ends with a line
+        pointing to the card, because the box must not pretend to know current stats.
+
+  Reference cards are static images (PNG, 800×480, generated on the PC from the KB
+  tables) so they render instantly: KT shooting sequence, KT block table, KT fight sequence,
+  KT scoring summary, 40k wound chart, 40k phase order, 40k scoring summary, the
+  glossary A–Z.
+
+
+  7 — Encyclopedia
+  Scope, in layers:
+
+     1. Teaching layer (local, authoritative for the box): the glossary, the concept chunks, the
+        team and faction profiles — everything in the Knowledge Base doc. ~400 entries.
+     2. Lore layer (local, summary depth): one entry each for the major factions, sub-factions,
+        named characters, key events, worlds and organisations of the 40k setting — a 100–
+        300 word original summary per entry, written in Deep Thought's register, with "read
+        more in the cloud" for depth. Target ~800 entries at v1.0, grown over time.
+
+
+
+
+                                                                                              Page 13 of 29
+Deep Thought — Software Spec
+
+
+
+
+     3. Cloud layer (on demand): anything else, answered by the model from its general
+        knowledge, with the local entry as context when one exists. Cached forever once
+         asked.
+
+  Data model ( knowledge.db , SQLite with FTS5):
+
+     entries(id, kind, game, title, aliases, body, source, updated)
+        kind: glossary | concept | team | faction | unit_role | lore | card
+     entries_fts(title, aliases, body)            -- full-text index
+     answers(qhash, question, answer, audio_path, created, hits)              -- cloud cache
+
+
+  Unit entries describe role and feel ("Intercessors: the standard Primaris line infantry;
+  durable, flexible, the unit to learn the game with"), never stats, points or rules text. That
+  keeps the box useful across balance updates and keeps it on the right side of Games
+  Workshop's IP.
+
+  Sources and licensing. Everything in the local database is written for this project —
+  original summaries, not copied text. Research sources for writing them: the official
+  Warhammer Community articles and free rules PDFs, Lexicanum and the Warhammer 40k
+  Fandom wiki (both community wikis; useful as reference, but their text is under share-
+  alike licences and is not copied in), Goonhammer and other reviews for playstyle framing.
+  The box is a fan project for one living room; it never distributes rules text or datasheets,
+  and the Settings screen says so.
+
+  Browsing: the Encyclopedia screen is three tabs (Factions tree, Kill Teams roster, Lore A–
+  Z) plus search; every entry has read aloud and more. In-game, Lookup searches the same
+  database with the current game's entries ranked first.
+
+  Growing it: tools/build_knowledge.py on the PC takes the Knowledge Base doc
+  (exported as Markdown) plus lore/*.md files and rebuilds knowledge.db ; sync.sh
+  pushes it. Adding an entry is adding a Markdown file with a front-matter header. The cloud
+  cache is also mined: questions asked three or more times get promoted to a local entry on
+  the next build.
+
+
+  8 — Voice and persona
+  One voice, chosen once. All speech — pre-made lines and cloud answers alike — uses the
+  same TTS voice so Deep Thought sounds like one entity. Pick a deep, measured, slightly
+  flat English voice from a cloud TTS service (OpenAI, ElevenLabs, Azure and Google all
+
+
+
+
+                                                                                           Page 14 of 29
+Deep Thought — Software Spec
+
+
+
+
+  have candidates; we audition three with the same five lines and you choose). The voice id
+  goes in config.toml and never changes casually, because every cached file would need
+  regenerating.
+
+  Pre-generation ( tools/build_audio.py , run on the PC): reads persona/lines.json
+  (the Part 1 line bank, extended as we go) and every game's teach.json , sends each line
+  to TTS once, stores audio/<line_id>.ogg (Opus, 24 kbps mono — ~1 MB per 10 minutes
+  of speech), and writes a manifest with the text hash so a changed line regenerates and an
+  unchanged one doesn't. Numbers and names: the digits 0–30, "to", "and", and each player
+  name are generated as separate clips and stitched for score readouts ("seven" + "to" +
+  "five"); it sounds slightly clipped, which suits the character.
+
+  Line selection ( persona/lines.py ): each moment has 3–8 variants; the picker avoids the
+  last two used in this session and weights by register. Registers: teach (patient, one quip
+  at the end), normal , terse (phase names and numbers only). Verbosity in Settings maps
+  to a register plus a probability that any optional remark plays at all (chatty 100 %, normal
+  60 %, terse 15 %).
+
+  Speech queue ( persona/speaker.py ): one speaker at a time; phase announcements
+  interrupt remarks, remarks never interrupt teaching; a new Next press cuts the current
+  line short with a 150 ms fade so the box never talks over an impatient table.
+
+  Cloud-written lines: when an event has no bank line (a 14-point swing, a game decided on
+  a tie-break, a fourth undo in a row) the engine asks the cloud for one line in-voice, speaks
+  it, and files it under that moment in the cache so the bank grows. Rate-limited to one per
+  minute so the box doesn't get chatty on someone else's dime.
+
+  Mic and speech-to-text: hold the button; arecord captures 16 kHz mono to a temp WAV
+  while the ring shows the listening pattern; release stops it. Clips under 0.6 s are discarded
+  as accidental. The clip goes to a cloud STT endpoint (Whisper-class); the transcript shows
+  on screen for a second ("You asked: …") so a misheard question can be cancelled with a
+  tap, then runs the lookup pipeline. Offline: the box says it cannot hear without the
+  network and opens the typed Lookup instead.
+
+  Persona guardrails in code: the system prompt for every cloud call is voice.txt (Part 1's
+  rules) plus three lines: stay neutral between players; never invent a rule — say the card
+  decides; answer in at most four sentences unless asked for more. The reply is checked for
+  length and for a short list of banned phrases (exclamation marks, "awesome", "let's go")
+  and regenerated once if it fails.
+
+
+
+
+                                                                                          Page 15 of 29
+Deep Thought — Software Spec
+
+
+
+
+  9 — Hardware services
+  The button ( hw/button.py , GPIO 17 with internal pull-up, 30 ms debounce). The classifier
+  turns raw edges into three gestures: press (down and up within 600 ms, no second press
+  within 350 ms), hold (down for 600 ms+; emits hold_start at 600 ms and hold_end on
+  release), double (two presses within 350 ms). The meaning is set by the current screen
+  (Section 4 table); the classifier never knows what it means. A 5-second hold on the Home
+  screen opens the shutdown prompt. The button's own LED is on a separate GPIO (not 5 V-
+  always-on as in the first wiring plan — with one button we can afford to drive it): steady =
+  on; slow pulse = "your move"; bright = listening; off = asleep.
+
+  The ring ( hw/ring.py , 16 × WS2812 on SPI MOSI, brightness capped at 50 %). An
+  animation thread at 30 fps runs named behaviours; the engine only ever names one:
+
+
+    Behaviour                  Looks like                                When
+
+     breathe                   Slow dim-to-bright in the idle colour     Boot, Home, idle
+                               (soft blue)
+
+     round(n,                  Solid round colour; a slow pulse on the   During play
+    side)                      active side's half of the ring
+
+     thinking                  A single dot chasing                      Waiting on the cloud
+
+     listening                 Rising ring that follows the mic level    Button held
+
+     flare(colour)             Bright flash, fade over 1.5 s             Big roll, objective taken,
+                                                                         game over
+
+     warn                      Amber double-blink                        Timer threshold, low voltage,
+                                                                         offline
+
+     off                                                                 Shutdown
+
+
+  Round colours: KT TP1–4 = blue, green, amber, red; 40k BR1–5 = blue, teal, green, amber,
+  red. Both games end on red so "red means last round" sticks.
+
+  Speaker ( persona/speaker.py ): I2S via the hifiberry-dac overlay, pygame.mixer at 24
+  kHz mono, one channel for speech and one for short UI sounds (a soft tick on Next, a low
+  tone on Undo). Volume is a software gain 0–100 in Settings; the amp's GAIN pin stays at
+  default.
+
+
+
+
+                                                                                                      Page 16 of 29
+Deep Thought — Software Spec
+
+
+
+
+  Mic ( hw/mic.py ): the USB mic appears as an ALSA capture device; arecord -D plughw:1
+  -f S16_LE -r 16000 -c 1 to a temp file for the duration of a hold. If no capture device
+  exists at boot, the Ask features switch to typed-only and Settings shows "mic: not found".
+
+  Power ( hw/power.py ): on shutdown the box says a closing line, fades the ring, writes the
+  session, and calls systemctl poweroff . The PSU's inline switch then cuts power safely.
+   vcgencmd get_throttled is polled every 30 s; an under-voltage bit shows the warn
+  behaviour once and logs it, because that is the one hardware fault most likely to corrupt
+  the SD card over time.
+
+
+  10 — Cloud service
+  Three calls, one client ( cloud/client.py ), all over HTTPS with a 12-second timeout and
+  one retry:
+
+     1. STT: POST the WAV, get a transcript. (Whisper-class API; ~$0.006 per minute of audio;
+        a question is 3–5 seconds.)
+     2. Answer: POST to the Claude API with voice.txt as the system prompt, plus: game,
+        phase, the player's question, the top three local knowledge hits as context, and the
+        last two Q&A turns so follow-ups work ("and what about on Conceal?"). Ask for ≤ 4
+        sentences. Use the smallest model that keeps the voice — Haiku-class — for rules and
+        quips; Sonnet-class only for lore "tell me more" requests. A typical answer is ~1,500
+         input tokens and ~120 output: well under a cent.
+     3. TTS: POST the answer text, get audio, save as OGG under the cache. (~$0.015 per
+        1,000 characters at typical rates.)
+
+  Rough cost per game night: 20 spoken questions + 5 cloud-written lines ≈ $0.50 the first
+  night, trending toward zero as the cache fills. A monthly spend cap (default $5) is
+  enforced client-side from the logged usage; past it, the box says so and goes local-only.
+  Settings shows this month's spend.
+
+  Keys live in config.toml with mode 600, never in the repo. Privacy: only the question
+  audio/text, game, phase and player first names leave the box; nothing else is logged
+  upstream.
+
+  Offline behaviour, in order: Wi-Fi check at boot and every minute; if down, Ask-by-voice is
+  disabled with a line, typed Lookup stays local, and every cloud-dependent button shows a
+  small cloud-off glyph. Nothing blocks, nothing retries forever.
+
+
+
+
+                                                                                         Page 17 of 29
+Deep Thought — Software Spec
+
+
+
+
+  Replacing the cloud later: the client is one file with three functions; a Pi 5 running a local
+  STT and a small local model could implement the same three functions on-box. Nothing
+  else in the program would change.
+
+
+  11 — Chromebook scoreboard
+  A Flask thread serves two things on port 8080: GET /state.json (the session, minus the
+  log) and GET / (one static HTML page with a few lines of JavaScript that polls
+   /state.json once a second). Open http://deepthought.local:8080 in the
+  Chromebook's browser, press F11, stand it at the end of the table. It shows: both players'
+  names and VP in very large type, CP, round and phase, the kill-grade bar (KT) or
+  secondaries (40k), and a quiet line of the last Deep Thought remark. Read-only by design;
+  all input stays on the box. Any phone on the Wi-Fi can open the same page.
+
+  Later option: a second route, /control , protected by a PIN shown on the box's Settings
+  screen, for adjusting scores from the Chromebook — useful when the box ends up at the
+  far end of a big table. Not in v1.0.
+
+
+  12 — Data and file layout
+     /home/<user>/deepthought/
+        main.py                   entry point (systemd runs this)
+       config.toml                voice id, API keys, Wi-Fi names, verbosity, spend
+     cap
+        deepthought/              the package (modules from Section 3)
+        data/
+            persona/lines.json    moment -> [ {id, text, register} ]
+            persona/voice.txt     the persona rules; also the cloud system prompt
+            games/killteam/       meta.json     phases.json    teach.json    lines.json
+     roster.json
+            games/wh40k/          same
+            cards/*.png           reference cards, 800x480
+            knowledge.db          SQLite: entries + FTS + answer cache (rebuilt on
+     the PC)
+        audio/<line_id>.ogg       pre-generated speech (manifest.json beside it)
+        cache/                    cloud answers' audio, keyed by hash
+        sessions/                 one JSON per game + snapshots; last ten kept
+        logs/                     rotating app log; usage.csv for cloud spend
+     tools/   (on the PC, in the same git repo)
+       build_knowledge.py      KB doc (Markdown export) + lore/*.md ->
+
+
+
+                                                                                           Page 18 of 29
+Deep Thought — Software Spec
+
+
+
+
+     knowledge.db
+       build_audio.py                      lines + teach steps -> audio/*.ogg via TTS,
+     incremental
+        build_cards.py                     KB tables -> cards/*.png
+       sync.sh                             rsync data/ audio/ and the package to the Pi,
+     restart the service
+
+
+  From the Knowledge Base doc to data files: the KB is the source of truth for words; the
+  build script parses its headings and tables: Part 1's table → lines.json ; Parts 3/7 →
+  concept entries; Parts 4/8 tables → teach.json (the "Narrator" column becomes the step
+  text and its line id); Parts 5/9 tables → roster.json and faction entries; Part 10 → glossary
+  entries. Edit the doc, run the two build scripts, sync. The program itself contains no game
+  text.
+
+  Versioning: the whole thing is one git repo; the Pi pulls a tag. data/ and audio/ are
+  tracked (audio via Git LFS or just copied by sync.sh ), the cache and sessions are not.
+
+
+
+  13 — Build plan
+  Each version is usable on its own and is tested on the real box before the next starts.
+  Estimates assume evenings and weekends, with Claude Code writing most of the code
+  and you testing on the hardware.
+
+
+    Version                    Delivers                    You test by           Rough effort
+
+    v0.1 Hardware              The Part 10 test scripts,   Running each; the     An evening, once the
+                               packaged: display, touch,   assembly guide's      box is assembled
+                               speaker, ring, button       Tests 1–6
+                               gestures, mic capture,
+                               Wi-Fi
+
+    v0.2 Scorer                The UI shell, Home → Pick   A full KT game with   2–3 evenings
+                               → Setup → Play →            the box as a silent
+                               Scoreboard → Game over;     scorer
+                               the session engine with
+                               undo; the Kill Team
+                               plugin's phases and
+                               scoring; silent-scorer
+                               mode; Chromebook page
+
+
+
+
+                                                                                                Page 19 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Version                    Delivers                      You test by            Rough effort
+
+    v0.3 Voice                 Line bank → audio build →     The same game with     2 evenings (plus
+                               playback; phase               the box talking        auditioning the
+                               announcements; ring                                  voice)
+                               behaviours; Reminder
+                               mode
+
+    v0.4 Teach                 Teach scripts, just-in-time   The first real         2 evenings + the
+    (KT)                       cards, reference cards,       teaching session —     session
+                               Lookup with the local         you and a friend who
+                               glossary                      hasn't played
+
+    v0.5 Ask                   Mic → STT → answer →          Twenty questions       2 evenings
+                               TTS, caching, spend cap,      across a game;
+                               offline fallbacks             check the cache hit
+                                                             the second time
+
+    v0.6 40k                   The 40k plugin: phases,       A Combat Patrol        2 evenings
+                               scoring sheet, teach          game
+                               script, round colours
+
+    v0.7                       The Encyclopedia screen,      Browsing; asking it    3 evenings for code;
+    Encyclopedia               the lore layer (first ~300    twenty things about    the entries grow
+                               entries), the cloud "more"    your Necrons           over weeks
+                               path, cache promotion
+
+    v1.0                       Settings, history, dice,      Three game nights      polish
+                               shutdown, update-from-
+                               PC, a week of real use
+                               without a crash
+
+    v1.1+                      D&D plugin (initiative,                              each a weekend
+                               conditions, 2024-rules
+                               lookup), Magic plugin
+                               (life, turn structure,
+                               formats), the /control
+                               route, crowns-aware ring
+                               effects
+
+
+  Order of first sessions: v0.2's silent-scorer game is the real milestone, because it proves
+  the engine and the screens on the actual table before any voice exists. Everything after is
+  layering.
+
+
+
+                                                                                                       Page 20 of 29
+Deep Thought — Software Spec
+
+
+
+
+  How we work it: this spec and the Knowledge Base are the inputs; the code lives in one
+  repo you own; each version is a branch with a short checklist; you flash, test, report what
+  felt wrong at the table, and that feedback edits the scripts and lines before it edits code.
+  The persona in particular will be tuned by hearing it.
+
+
+  14 — Honest limits and open decisions
+  Limits that won't change on a Pi 2:
+
+         It cannot see the table. Every game event it tracks is one the players tell it (a button, a
+         tap, a word). The design makes that one tap, but it is still a tap.
+         It cannot think without the network. Local = everything scripted and everything in the
+         database; cloud = everything else. The persona sounds the same either way, which is
+         the point of pre-generating.
+         It cannot be the rulebook. It teaches the system and reads the glossary; stats, points
+         and card text stay on the cards. This is both a legal line and a practical one — the box
+         doesn't go stale every balance update.
+         Voice recognition is push-to-talk, not always-listening. No wake word (not enough
+         CPU, and nobody wants a mic open all night anyway).
+         1 GB of RAM means one game at a time and no browser-based anything.
+
+  Decisions to make before v0.3:
+
+     1. The voice. Audition three; I'll prepare the same five lines in each.
+     2. How chatty by default. Start on normal (60 % of optional remarks) and tune at the
+        table.
+     3. Player names. Pre-record a dozen common ones plus everyone in the group, or always
+        use "player one / player two"? Pre-recording the group's names is the better
+        experience and takes one build.
+     4. Button LED. Driven from a GPIO (recommended, lets it pulse) means one extra jumper
+        vs the always-on 5 V in the current wiring table; I'll update the assembly guide's Part 7
+        either way, since it still lists four buttons.
+
+  Decisions that can wait: cloud provider for STT/TTS (any works; cost differences are
+  cents), whether to add the /control route, how far the lore layer grows, and when the Pi
+  5 upgrade happens — the cloud client is the only module that would change.
+
+
+
+
+                                                                                              Page 21 of 29
+Deep Thought — Software Spec
+
+
+
+
+  15 — Per-game screens, the content library and the DM assistant
+  Added 20 November 2026. This section extends Sections 4, 5, 6 and 12. Where it disagrees
+  with them, this section wins.
+
+
+  15.1 Each game gets its own screens
+  Home, Pick a game, Ask, Dice and Settings are shared. Everything shown during play
+  comes from the game's plugin. The mockup canvas has one row per game.
+
+
+    Game                       Play screen                         Extra screens
+
+    Kill Team                  Turning point, phase, whose         Scoreboard, end-of-round score
+                               activation                          sheet, teach step
+
+    Warhammer                  Battle round, five-phase bar,       Command-phase scoring,
+    40,000                     victory and command points          reference cards, army tracker
+
+    D&D                        Initiative order with the current   One character (conditions,
+                               turn highlighted                    concentration, death saves), DM
+                                                                   campaign screen, rules lookup
+
+    Magic                      Life totals, two players or four    Commander damage per player,
+                                                                   counters, card lookup
+
+
+  D&D and Magic are no longer greyed out on Pick a game once their plugins exist.
+
+
+  15.2 Plugin additions
+  Each plugin already supplies setup questions, a turn structure and scoring (Section 5).
+  Three new things:
+
+          screens : the list of screen classes the plugin owns. The engine no longer assumes
+         every game has a scoreboard.
+          button_map : what the one physical button does in this game. Press is always "next"
+         (next phase, next turn, next step). Hold is always "talk". Double press is always "undo".
+          trackers : named counters the engine saves and restores. Kill Team and 40k use
+         points. D&D uses a combatant list. Magic uses life, poison and a commander-damage
+         grid.
+
+
+
+
+                                                                                                   Page 22 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Plugin               What "next" means                     Trackers
+
+     killteam            Next activation, then next            Victory points by type, command points
+                         phase
+
+     wh40k               Next phase, then next player          Victory points (primary, secondary),
+                         turn                                  command points, units alive
+
+     dnd                 Next turn in initiative, then next    Combatants: initiative, conditions,
+                         round                                 concentration, death saves
+
+     mtg                 Next step, then next player           Life, poison, commander damage (who
+                                                               dealt it to whom), monarch
+
+
+  Magic rules the engine must know: a player is out at 0 life, at 10 poison, or at 21 combat
+  damage from a single commander. The screen warns one step before each.
+
+  D&D rule the engine must know: when a concentrating character takes damage, prompt
+  for a Constitution save at DC 10 or half the damage, whichever is higher.
+
+
+  15.3 The content library: content.db
+  A second SQLite file beside the knowledge database. The knowledge database holds
+  what the box teaches in its own words. content.db holds source text: official free
+  downloads, the owner's own books, Magic cards and the Magic rulebook. It is built by
+  dt_content.py , normally on a PC, and copied to the Pi.
+
+
+    Table                           Holds
+
+     docs + docs_fts                One row per PDF page, EPUB chapter, Markdown
+                                    section or numbered Magic rule. Columns: game,
+                                    source (book name), ref (page or rule number),
+                                    body, mine , dm_only .
+
+     cards + cards_fts              One row per Magic card: name, cost, type line,
+                                    rules text, power and toughness, legal formats,
+                                    faces.
+
+     rulings                        Official rulings, linked to cards.
+
+     files                          Every loaded file with a checksum, so a sync only
+                                    re-reads what changed.
+
+
+
+
+                                                                                                      Page 23 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Table                      Holds
+
+     meta                      Load dates, rulebook version, credit lines.
+
+
+  Functions the box calls (all in dt_content.py ):
+
+          search(con, query, game, dm=False, limit) returns book, page, title and a short
+         excerpt, best match first. Tries all words, then any word.
+          find_cards(con, text) returns exact name, then names starting with the text, then
+         any match.
+          card_rulings(con, oracle_id) and mana_words(cost) , which turns a cost into
+         words for reading aloud.
+          sync(con, content_dir) re-indexes the free and mine folders.
+
+  File layout change to Section 12: add content/free/<game>/ , content/mine/<game>/
+  and content.db next to the existing data folder. Games are wh40k , killteam , dnd ,
+   mtg .
+
+
+  15.4 How a question gets answered now
+     1. Lookup screens call search or find_cards directly. No network.
+     2. A spoken question goes to speech-to-text as before.
+     3. The box runs search for the current game and takes the top three rows.
+     4. It sends the question, those three excerpts and the persona prompt to the cloud
+        model.
+     5. The answer card shows the reply plus "Source: book, page". Read aloud speaks the
+         reply, not the excerpt.
+     6. If search finds nothing, the box says so and answers from the knowledge database,
+        marked "from my own notes".
+
+  Rows with dm_only = 1 are only searched, shown or sent when DM mode is unlocked.
+
+
+  15.5 DM assistant
+  DM mode is part of the dnd plugin. It is unlocked with a four-digit code on the touch
+  screen and shows "DM only" in the top strip.
+
+
+
+
+                                                                                          Page 24 of 29
+Deep Thought — Software Spec
+
+
+
+
+    Feature                    Data                              Notes
+
+    Campaign                   data/campaigns/<name>.json        Party, current chapter and page,
+    file                                                         session log, people, quests, calendar,
+                                                                 fixed results, rulings, treasure. Filled
+                                                                 in by the DM.
+
+    Session                    Built from the last log entry     Read aloud at session start. The DM
+    recap                                                        can correct it first.
+
+    Prep                       Seven fixed steps plus the DM's   Ticks reset each session.
+    checklist                  own
+
+    Fight loader               Monsters from content.db          Adds stat blocks to the initiative
+                                                                 tracker ahead of time.
+
+    Book search                search(..., dm=True)              Shows campaign pages on screen.
+                                                                 Never spoken unless Read to table is
+                                                                 pressed.
+
+    People list                Campaign file                     One line per character met.
+
+    Improvise                  Cloud model                       Names, shops, rumours. Always
+                                                                 labelled as invented.
+
+
+  The scoreboard web page (Section 11) gets a D&D view that shows initiative order only: no
+  hit points, no hidden monsters, no DM notes.
+
+
+  15.6 Build order
+     1. Put content.db on the box and wire Lookup to it. This is useful for all four games
+         before any new plugin exists.
+     2. mtg plugin. It is the simplest: counters and card lookup.
+     3. wh40k plugin. It reuses most of killteam .
+     4. dnd plugin: initiative tracker first, DM mode second.
+
+
+  15.7 Limits
+         The loader has only been run against made-up test files and one full-size synthetic
+         card file. It has not yet met a real rulebook PDF, the real Scryfall download or the real
+         Magic rulebook.
+
+
+
+
+                                                                                                      Page 25 of 29
+Deep Thought — Software Spec
+
+
+
+
+         PDF text comes out in whatever order the PDF stores it. Two-column pages and stat
+         tables may read badly in excerpts.
+         The box does not parse datasheets or stat blocks into fields. It finds the page and
+         shows the text. Structured stat blocks would be a later step, starting with the D&D
+         SRD.
+         Spoken questions send short excerpts of the owner's books to the cloud model.
+         Lookup screens send nothing.
+
+
+  16 — D&D characters: create, upload, track
+  Added 20 November 2026.
+
+
+  16.1 What it does
+         Create a character from scratch.
+         Upload an existing character sheet.
+         Track it from then on: hit points, level-ups, gear, coins, attuned items, spell slots, and a
+         dated history of every change.
+
+  One JSON file per character, in data/characters/<name>.json . The module is
+   dt_characters.py .
+
+
+  16.2 What the box works out, and what it leaves to the book
+
+    The box calculates                                The box asks, and the player answers from
+                                                      their book
+
+    Ability modifiers                                 Which class, species and background
+
+    Proficiency bonus                                 Which skills are proficient
+
+    Hit points at level 1 and on each level-up,       Which subclass
+    rolled or average
+
+    Hit point change when Constitution changes        Which feat or ability score increase
+
+    Saving throws, skill bonuses, passive             Which spells
+    Perception, initiative
+
+    Spell slots for single-class and multiclass       Armour Class (entered, not calculated)
+    casters, 2014 or 2024 rules
+
+
+
+
+                                                                                               Page 26 of 29
+Deep Thought — Software Spec
+
+
+
+
+    The box calculates                                       The box asks, and the player answers from
+                                                             their book
+
+    Warlock pact slots                                       What a class feature or item actually does
+
+    Attunement limit of three, coins that cannot
+    go negative
+
+
+  The box does not hold class feature text. On a level-up it says what the numbers do and
+  tells the player which entry to read. If that book is in content.db , Lookup opens the page.
+
+  Armour Class is entered by hand on purpose. Too many features change it for the box to
+  get it right silently.
+
+
+  16.3 Where typing happens
+  A 5-inch screen is fine for tapping plus and minus. It is bad for typing a name or an
+  inventory. So:
+
+         On the box: open a sheet, change hit points, tick gear worn or attuned, spend coins,
+         run a level-up, review an upload.
+         On a phone or the Chromebook: create a character, upload a sheet, type gear and
+         notes. The box serves a page at /characters on the same web server as the
+         scoreboard (Section 11) and shows a QR code for it.
+
+
+  16.4 Three ways to get a sheet in
+
+    Route                      How it works                           Status
+
+    Fillable PDF               The official form-fillable sheet, or   Built and tested on a test sheet.
+                               any PDF sheet with form fields.        Not yet tried on a real one.
+                               The box reads the fields directly.
+
+    Photo of a paper           The phone uploads a photo. The         Designed, not built.
+    sheet                      cloud model reads it into the same
+                               fields.
+
+    Type it in                 A form on the phone page with          Designed, not built.
+                               the same fields.
+
+
+  Every route ends on the same review screen. The box never trusts an upload. It checks:
+
+
+
+
+                                                                                                      Page 27 of 29
+Deep Thought — Software Spec
+
+
+
+
+         every ability score is present and between 1 and 30;
+         each printed modifier matches its score (and swaps them when a sheet prints them
+         the other way round);
+         hit points fall inside the range that class, level and Constitution allow;
+         Armour Class is present;
+         no more than three attuned items.
+
+  Skill and saving throw proficiencies are tick boxes on sheets, and tick-box field names
+  vary too much to read reliably. The review screen asks the player to tick them.
+
+  A flat PDF, meaning a printed or scanned sheet with no form fields, cannot use the PDF
+  route. The box says so and offers the photo route.
+
+
+  16.5 Level-up flow
+     1. The DM or player presses Level up on the sheet. With several classes, the box asks
+        which one.
+     2. Hit points: Take the average, or enter the roll. The box adds the Constitution modifier,
+         with a minimum gain of 1.
+     3. The box lists what changed: proficiency bonus, spell slots, pact slots.
+     4. The box lists what needs choosing: subclass at the right level for the edition, ability
+         score increase or feat at 4, 8, 12, 16 and 19 (fighters also 6 and 14, rogues also 10).
+     5. Done writes the change and one history line.
+
+  When the campaign file says a level is due (Section 15.5), the DM screen offers Level up
+  for the whole party in turn.
+
+
+  16.6 Link to the fight tracker
+  Characters in the party are added to the initiative tracker automatically. Damage and
+  healing in a fight write to the character file. Temporary hit points are used first. Damage
+  that leaves a character at 0 with leftover damage equal to their maximum is flagged as
+  instant death, for the DM to confirm.
+
+  A long rest restores hit points and slots. Under 2014 rules it returns half the character's hit
+  dice; under 2024 rules, all of them.
+
+
+
+
+                                                                                                   Page 28 of 29
+Deep Thought — Software Spec
+
+
+
+
+  16.7 Screens
+  Six mockups in the row "Dungeons & Dragons: characters": the party list, the phone hand-
+  off, the character sheet, gear and coins, level up, and the upload review.
+
+
+  16.8 Functions
+   new_character , creation_todo , level_up , set_ability , add_item , remove_item ,
+   equip , attune , add_coins , damage , heal , long_rest , derived , check , hp_range ,
+   import_pdf_fields , from_fields , save , load .
+
+
+  16.9 Limits
+         D&D only. Kill Team and 40k rosters are a separate, simpler job (a list of units with
+         wounds).
+         Classes outside the twelve core ones and Artificer need their hit die typed in once.
+         The module has 74 passing checks, all on characters and sheets made for the tests.
+         The PDF route matches field names used on the common fillable sheets, written from
+         memory. A real sheet may use names it does not know; those are listed as unused, and
+         I add them.
+         The phone page, the photo route and the on-box screens are not built yet.
+
+
+
+
+                                                                                             Page 29 of 29
+

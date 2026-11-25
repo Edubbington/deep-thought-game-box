@@ -1,0 +1,9 @@
+[
+ {"title": "The aim", "text": "Be the first to play every card in your hand."},
+ {"title": "Setting up", "text": "Deal seven cards each. Turn the top card of the deck over to start the discard pile."},
+ {"title": "A turn", "text": "Play one card that matches the top of the discard pile in colour, number or symbol. If you cannot, draw one card. If that card can be played, you may play it at once. Otherwise the turn passes."},
+ {"title": "The action cards", "text": "Skip: the next player loses their turn. Reverse: play changes direction, and with two players it works as a Skip. Draw Two: the next player draws two and loses their turn.\n\nWild: name the colour to be played next. Wild Draw Four: name the colour, and the next player draws four and loses their turn."},
+ {"title": "The Wild Draw Four challenge", "text": "You may only play a Wild Draw Four when you hold no card of the colour on the pile. The player who must draw may challenge. You show them your hand. If you had the colour, you draw the four yourself. If you did not, the challenger draws six."},
+ {"title": "Saying it", "text": "When you play your second-to-last card you must say Uno. If someone catches you before the next player begins their turn, you draw two."},
+ {"title": "Scoring, if you want it", "text": "The winner of a hand scores the cards left in the others' hands: number cards at face value, Skip, Reverse and Draw Two twenty each, Wilds fifty each. First to five hundred wins.\n\nMost tables simply count hands won. That is what I count here: tap the winner's name."}
+]

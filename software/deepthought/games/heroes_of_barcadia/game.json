@@ -1,0 +1,13 @@
+{
+  "id": "heroes_of_barcadia",
+  "name": "Heroes of Barcadia",
+  "blurb": "Rules not loaded yet",
+  "players": [
+    2,
+    6
+  ],
+  "order": 113,
+  "phases": [
+    "Turn"
+  ]
+}

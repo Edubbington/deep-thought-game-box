@@ -1,0 +1,19 @@
+{
+  "id": "dungeon_mayhem",
+  "name": "Dungeon Mayhem",
+  "blurb": "Last adventurer standing",
+  "players": [
+    2,
+    4
+  ],
+  "order": 108,
+  "trackers": [
+    {
+      "name": "Hit points",
+      "start": 10,
+      "step": 1,
+      "min": 0,
+      "max": 10
+    }
+  ]
+}

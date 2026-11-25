@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Play: scoreboard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+body{margin:0}
+a{color:#6CB6FF}a:hover{color:#9CCEFF}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width: 800px; height: 480px; box-sizing: border-box; background: #0B0F14; color: #EAF0F6; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+<div style="height: 60px; flex-shrink: 0; box-sizing: border-box; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #151C26; border-bottom: 1px solid #2F3B4D">
+<div style="font-size: 22px; color: #A9B8CA">Kill Team · Round 2 of 4</div>
+<div style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 24px; font-weight: 700; color: #EAF0F6">Scoreboard</div>
+<div style="width: 10px"></div>
+</div><div style="flex: 1; padding: 14px 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="flex: 1; display: flex; gap: 14px">
+<div style="flex: 1; background: #151C26; border: 1px solid #2F3B4D; border-radius: 18px; padding: 14px 22px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: baseline; justify-content: space-between">
+<span style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #6CB6FF">Ethan</span>
+<span style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 96px; font-weight: 700; line-height: 1; color: #6CB6FF">7</span>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 24px"><span style="color: #A9B8CA">Crit Op</span><span style="font-weight: 600">4 / 6</span></div><div style="display: flex; justify-content: space-between; font-size: 24px"><span style="color: #A9B8CA">Tac Op</span><span style="font-weight: 600">2 / 6</span></div><div style="display: flex; justify-content: space-between; font-size: 24px"><span style="color: #A9B8CA">Kill Op</span><span style="font-weight: 600">1 / 6</span></div>
+<div style="height: 1px; background: #2F3B4D; margin: 4px 0"></div>
+<div style="display: flex; justify-content: space-between; font-size: 22px; color: #A9B8CA"><span>Command points 3</span><span>Lost 1 of 6</span></div>
+</div>
+<div style="flex: 1; background: #151C26; border: 1px solid #2F3B4D; border-radius: 18px; padding: 14px 22px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: baseline; justify-content: space-between">
+<span style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #FFA64D">Trevor</span>
+<span style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 96px; font-weight: 700; line-height: 1; color: #FFA64D">5</span>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 24px"><span style="color: #A9B8CA">Crit Op</span><span style="font-weight: 600">2 / 6</span></div><div style="display: flex; justify-content: space-between; font-size: 24px"><span style="color: #A9B8CA">Tac Op</span><span style="font-weight: 600">2 / 6</span></div><div style="display: flex; justify-content: space-between; font-size: 24px"><span style="color: #A9B8CA">Kill Op</span><span style="font-weight: 600">1 / 6</span></div>
+<div style="height: 1px; background: #2F3B4D; margin: 4px 0"></div>
+<div style="display: flex; justify-content: space-between; font-size: 22px; color: #A9B8CA"><span>Command points 4</span><span>Lost 2 of 6</span></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 22px; color: #A9B8CA">
+<span>Tap a number to correct it</span>
+<span>Press the button to go back</span>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":800,"height":480}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

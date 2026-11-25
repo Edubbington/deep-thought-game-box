@@ -1,0 +1,13 @@
+{
+  "id": "far_away",
+  "name": "Far Away",
+  "blurb": "Rules not loaded yet",
+  "players": [
+    2,
+    2
+  ],
+  "order": 110,
+  "phases": [
+    "Turn"
+  ]
+}

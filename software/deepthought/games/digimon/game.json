@@ -1,0 +1,15 @@
+{
+  "id": "digimon",
+  "name": "Digimon Card Game",
+  "blurb": "Break security, then strike",
+  "players": [
+    2,
+    2
+  ],
+  "order": 105,
+  "phases": [
+    "Unsuspend and draw",
+    "Breeding",
+    "Main"
+  ]
+}

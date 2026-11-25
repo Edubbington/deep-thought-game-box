@@ -1,0 +1,13 @@
+{
+  "id": "tic_tac_ko",
+  "name": "Tic Tac K.O.",
+  "blurb": "Rules not loaded yet",
+  "players": [
+    2,
+    4
+  ],
+  "order": 120,
+  "phases": [
+    "Turn"
+  ]
+}

@@ -1,0 +1,15 @@
+import sys; sys.path.insert(0,'/home/claude/build')
+from lib import *
+bpy.ops.wm.read_factory_settings(use_empty=True)
+t0=time.time()
+bpy.ops.wm.stl_import(filepath="/home/claude/stl/body.stl")
+o=bpy.context.selected_objects[0]; o.name="DT"
+o.scale=(21,21,21); o.rotation_euler=(math.radians(90),0,math.radians(180))
+sel(o); bpy.ops.object.transform_apply(location=False,rotation=True,scale=True)
+remesh(o,0.8); print(stats(o))
+head=dup(o,"P_Head"); b=box("s",Vector((0,0,173)),(400,400,154)); boolean(head,b,'INTERSECT'); rm(b)
+core=dup(o,"P_Core"); b=box("s",Vector((0,0,(23.4+96)/2)),(400,400,96-23.4)); boolean(core,b,'INTERSECT'); rm(b)
+pl=dup(o,"P_Plinth"); b=box("s",Vector((0,0,(-5+22.9)/2)),(400,400,27.9)); boolean(pl,b,'INTERSECT'); rm(b)
+for x in (head,core,pl): print(stats(x))
+bpy.ops.wm.save_as_mainfile(filepath="/home/claude/build/s1.blend")
+print("t %.0fs"%(time.time()-t0))

@@ -1,0 +1,18 @@
+{
+  "id": "cards_for_all_people",
+  "name": "Cards for All People",
+  "blurb": "A judge picks the best answer",
+  "players": [
+    3,
+    6
+  ],
+  "order": 101,
+  "trackers": [
+    {
+      "name": "Points",
+      "start": 0,
+      "step": 1,
+      "min": 0
+    }
+  ]
+}

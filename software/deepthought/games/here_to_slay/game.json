@@ -1,0 +1,23 @@
+{
+  "id": "here_to_slay",
+  "name": "Here to Slay",
+  "blurb": "Build a party, slay monsters",
+  "players": [
+    2,
+    6
+  ],
+  "order": 112,
+  "trackers": [
+    {
+      "name": "Monsters slain",
+      "start": 0,
+      "step": 1,
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "win": {
+    "tracker": "Monsters slain",
+    "at": 3
+  }
+}

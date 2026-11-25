@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D&amp;D: Dungeon Master campaign screen</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+body{margin:0}
+a{color:#6CB6FF}a:hover{color:#9CCEFF}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width: 800px; height: 480px; box-sizing: border-box; background: #0B0F14; color: #EAF0F6; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+<div style="height: 60px; flex-shrink: 0; box-sizing: border-box; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #151C26; border-bottom: 1px solid #2F3B4D">
+<div style="font-size: 22px; color: #A9B8CA">D&amp;D · DM only</div>
+<div style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 24px; font-weight: 700; color: #EAF0F6">Session 4</div>
+<div style="width: 10px"></div>
+</div><div style="flex: 1; padding: 12px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 14px; flex: 1">
+<div style="flex: 1.2; background: #151C26; border: 1px solid #2F3B4D; border-radius: 14px; padding: 12px 18px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 22px; color: #A9B8CA">Tonight: Chapter 2 [YOUR CAMPAIGN]</div>
+<div style="display: flex; align-items: center; gap: 12px; font-size: 22px; color: #A9B8CA"><div style="width: 28px; height: 28px; border-radius: 6px; border: 2px solid #EAF0F6; background: #EAF0F6; flex-shrink: 0"></div><span>Recap read aloud</span></div>
+<div style="display: flex; align-items: center; gap: 12px; font-size: 22px; color: #EAF0F6"><div style="width: 28px; height: 28px; border-radius: 6px; border: 2px solid #EAF0F6; background: transparent; flex-shrink: 0"></div><span>Map and tokens out</span></div>
+<div style="display: flex; align-items: center; gap: 12px; font-size: 22px; color: #EAF0F6"><div style="width: 28px; height: 28px; border-radius: 6px; border: 2px solid #EAF0F6; background: transparent; flex-shrink: 0"></div><span>Next fight loaded</span></div>
+<div style="display: flex; align-items: center; gap: 12px; font-size: 22px; color: #EAF0F6"><div style="width: 28px; height: 28px; border-radius: 6px; border: 2px solid #EAF0F6; background: transparent; flex-shrink: 0"></div><span>Hand out the letter</span></div>
+</div>
+<div style="flex: 1; background: #151C26; border: 1px solid #2F3B4D; border-radius: 14px; padding: 12px 18px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 22px; color: #A9B8CA">Your notes from last time</div>
+<div style="font-size: 22px; line-height: 1.3">[YOUR NOTES] The party took the job and owes the innkeeper a favour.</div>
+</div>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" style="flex: 1; width: auto; height: 68px; box-sizing: border-box; padding: 0 20px; background: #EAF0F6; color: #0B0F14; border: 1px solid #EAF0F6; border-radius: 14px; font-size: 22px; font-weight: 600">Fight</button>
+<button type="button" style="flex: 1; width: auto; height: 68px; box-sizing: border-box; padding: 0 20px; background: #1D2633; color: #EAF0F6; border: 1px solid #2F3B4D; border-radius: 14px; font-size: 22px; font-weight: 600">People</button>
+<button type="button" style="flex: 1.2; width: auto; height: 68px; box-sizing: border-box; padding: 0 20px; background: #1D2633; color: #EAF0F6; border: 1px solid #2F3B4D; border-radius: 14px; font-size: 22px; font-weight: 600">Monsters</button>
+<button type="button" style="flex: 1; width: auto; height: 68px; box-sizing: border-box; padding: 0 20px; background: #1D2633; color: #EAF0F6; border: 1px solid #2F3B4D; border-radius: 14px; font-size: 22px; font-weight: 600">Rules</button>
+<button type="button" style="flex: 0.8; width: auto; height: 68px; box-sizing: border-box; padding: 0 20px; background: #1D2633; color: #EAF0F6; border: 1px solid #2F3B4D; border-radius: 14px; font-size: 22px; font-weight: 600">Log</button>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":800,"height":480}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

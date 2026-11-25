@@ -1,0 +1,578 @@
+{
+ "format": 1,
+ "campaign": "Dragon of Icespire Peak",
+ "source_book": "D&D Essentials Kit (2019)",
+ "dm_only": true,
+ "note": "Everything here is a slot for the DM to fill or a prompt written for this box. It holds no text from the adventure booklet. Names and quest details are from memory: check them against your booklet, and trust the booklet.",
+ "fixed_results": {
+  "rules_edition": {
+   "value": null,
+   "choices": [
+    "2014 (the kit's rulebook)",
+    "2024 (revised rules)"
+   ],
+   "why": "The kit was written for the 2014 rules. Pick one before session one and do not mix."
+  },
+  "sidekicks": {
+   "value": [],
+   "why": "For one or two players. Record who the party hired."
+  },
+  "home_base": {
+   "value": null,
+   "why": "Where the party sleeps and keeps things in Phandalin."
+  },
+  "dragon_table": {
+   "value": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null,
+    "8": null,
+    "9": null,
+    "10": null,
+    "11": null,
+    "12": null,
+    "13": null,
+    "14": null,
+    "15": null,
+    "16": null,
+    "17": null,
+    "18": null,
+    "19": null,
+    "20": null
+   },
+   "why": "Copy the 20 results of the booklet's dragon location table here once, yourself, from your own booklet: replace each null with the words for that roll, in quotes. The DM desk's Tables tile (More, then Tables) then rolls a d20, shows you where it is and logs it. Until you do, that screen says the table has not been copied in."
+  },
+  "dragon_roll_when": {
+   "value": null,
+   "why": "Write down when the booklet tells you to roll, so you do it the same way every time."
+  },
+  "dragon_condition": {
+   "value": null,
+   "why": "Hit points and anything else that carries over if the party hurts the dragon and it gets away."
+  }
+ },
+ "dragon": {
+  "current_location": null,
+  "last_roll": null,
+  "seen_by_party": 0,
+  "fought_by_party": 0
+ },
+ "levelling": {
+  "method": "Quests finished, not experience points. The booklet's table rules; this is the pattern to check against it.",
+  "pattern": [
+   {
+    "after": "1st starting quest finished",
+    "level": 2
+   },
+   {
+    "after": "2nd starting quest finished",
+    "level": 3
+   },
+   {
+    "after": "2 later quests finished",
+    "level": 4
+   },
+   {
+    "after": "4 later quests finished",
+    "level": 5
+   },
+   {
+    "after": "6 later quests finished",
+    "level": 6
+   },
+   {
+    "after": "dragon defeated",
+    "level": 7
+   }
+  ],
+  "starting_quests_done": 0,
+  "later_quests_done": 0,
+  "party_level": 1
+ },
+ "board_rules": [
+  {
+   "tier": 1,
+   "posted": "at the start"
+  },
+  {
+   "tier": 2,
+   "posted": "when two tier 1 quests are finished"
+  },
+  {
+   "tier": 3,
+   "posted": "when two tier 2 quests are finished"
+  }
+ ],
+ "quests": [
+  {
+   "name": "Dwarven Excavation",
+   "tier": 1,
+   "kind": "Small dungeon",
+   "status": "not posted",
+   "watch_for": "Slow, tough oozes inside. More trouble arrives as the party leaves.",
+   "box_setup": "Load both fights. Add the two prospectors to People.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Gnomengarde",
+   "tier": 1,
+   "kind": "Exploration and talking",
+   "status": "not posted",
+   "watch_for": "Mostly a mystery, not a fight. Strange magic effects in one area.",
+   "box_setup": "Have Dice ready for the magic effects. Add both kings to People.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Umbrage Hill",
+   "tier": 1,
+   "kind": "One big monster",
+   "status": "not posted",
+   "watch_for": "The monster is far too strong for level 1 in a straight fight. It can be talked to or bought off.",
+   "box_setup": "Load the fight, but plan the conversation first.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Butterskull Ranch",
+   "tier": 2,
+   "kind": "Rescue and raid",
+   "status": "not posted",
+   "watch_for": "Many weak enemies spread over a site. A frontal attack draws them all.",
+   "box_setup": "Load the enemies as one group entry plus a leader.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Loggers' Camp",
+   "tier": 2,
+   "kind": "Delivery, then an ambush",
+   "status": "not posted",
+   "watch_for": "Burrowing monsters appear among the party. Travel is by river.",
+   "box_setup": "Log travel days. Load the ambush.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Mountain's Toe Gold Mine",
+   "tier": 2,
+   "kind": "Escort, then a standoff",
+   "status": "not posted",
+   "watch_for": "The occupants shrug off ordinary weapons. A party with no magic or silver cannot win by force. Talking works.",
+   "box_setup": "Check what magic weapons and spells the party has before this session.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Axeholm",
+   "tier": 3,
+   "kind": "Large dungeon",
+   "status": "not posted",
+   "watch_for": "The longest site. One undead here can drop several characters at once with a single ability.",
+   "box_setup": "Plan two sessions. Load fights room by room. Review death saves.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Dragon Barrow",
+   "tier": 3,
+   "kind": "Short tomb",
+   "status": "not posted",
+   "watch_for": "Traps more than monsters. The prize matters for the finale.",
+   "box_setup": "Add the prize to Treasure when found.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Woodland Manse",
+   "tier": 3,
+   "kind": "Ruin with cultists",
+   "status": "not posted",
+   "watch_for": "Cultists who change shape, plus plant creatures. Fire matters.",
+   "box_setup": "Load both enemy types.",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Shrine of Savras",
+   "tier": 0,
+   "kind": "Side site",
+   "status": "off the board",
+   "watch_for": "Big bruisers. Fine for level 3 and up.",
+   "box_setup": "",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Tower of Storms",
+   "tier": 0,
+   "kind": "Side site",
+   "status": "off the board",
+   "watch_for": "Coastal site. Tide and weather matter.",
+   "box_setup": "",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Circle of Thunder",
+   "tier": 0,
+   "kind": "Side site",
+   "status": "off the board",
+   "watch_for": "A summoning the party can interrupt. The summoned creature is a boss fight.",
+   "box_setup": "",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Falcon's Hunting Lodge",
+   "tier": 0,
+   "kind": "Safe house",
+   "status": "off the board",
+   "watch_for": "No fight expected. A good place to rest and get a lead.",
+   "box_setup": "",
+   "session": null,
+   "your_notes": ""
+  },
+  {
+   "name": "Icespire Hold",
+   "tier": 0,
+   "kind": "Finale",
+   "status": "off the board",
+   "watch_for": "The dragon's lair. Other people want the dragon too.",
+   "box_setup": "Load the dragon with its current condition from Fixed results.",
+   "session": null,
+   "your_notes": ""
+  }
+ ],
+ "party": [
+  {
+   "player": "",
+   "character": "",
+   "class": "",
+   "level": 1,
+   "armour_class": null,
+   "passive_perception": null,
+   "max_hit_points": null
+  },
+  {
+   "player": "",
+   "character": "",
+   "class": "",
+   "level": 1,
+   "armour_class": null,
+   "passive_perception": null,
+   "max_hit_points": null
+  },
+  {
+   "player": "",
+   "character": "",
+   "class": "",
+   "level": 1,
+   "armour_class": null,
+   "passive_perception": null,
+   "max_hit_points": null
+  },
+  {
+   "player": "",
+   "character": "",
+   "class": "",
+   "level": 1,
+   "armour_class": null,
+   "passive_perception": null,
+   "max_hit_points": null
+  },
+  {
+   "player": "",
+   "character": "",
+   "class": "",
+   "level": 1,
+   "armour_class": null,
+   "passive_perception": null,
+   "max_hit_points": null
+  }
+ ],
+ "position": {
+  "quest": null,
+  "booklet_page": null
+ },
+ "calendar": {
+  "day": 1,
+  "date": "",
+  "notes": []
+ },
+ "tables_why": "Other roll tables, copied in by you from your own books. Each one: a name, the die, and a row for each result, like \"Name\": {\"die\": 20, \"rows\": [{\"lo\": 1, \"hi\": 2, \"text\": \"your words\"}]}. The dragon's location table has its own slot above, under fixed_results, dragon_table.",
+ "tables": {},
+ "people": [
+  {
+   "name": "Harbin Wester",
+   "where": "Phandalin",
+   "role": "Townmaster. Posts the jobs and pays for them.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Toblen Stonehill",
+   "where": "Phandalin",
+   "role": "Innkeeper, Stonehill Inn.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Elmar Barthen",
+   "where": "Phandalin",
+   "role": "Runs Barthen's Provisions.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Linene Graywind",
+   "where": "Phandalin",
+   "role": "Runs the Lionshield Coster trading post.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Halia Thornton",
+   "where": "Phandalin",
+   "role": "Runs the Miner's Exchange.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Sister Garaele",
+   "where": "Phandalin",
+   "role": "Keeps the Shrine of Luck.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Daran Edermath",
+   "where": "Phandalin",
+   "role": "Retired adventurer with an orchard.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Qelline Alderleaf",
+   "where": "Phandalin",
+   "role": "Farmer.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Adabra Gwynn",
+   "where": "Umbrage Hill",
+   "role": "Midwife and potion maker.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Dazlyn Grayshard",
+   "where": "Dwarven Excavation",
+   "role": "Dwarf prospector.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Norbus Ironrune",
+   "where": "Dwarven Excavation",
+   "role": "Dwarf prospector.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "King Korboz",
+   "where": "Gnomengarde",
+   "role": "One of two gnome kings.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "King Gnerkli",
+   "where": "Gnomengarde",
+   "role": "One of two gnome kings.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Alfonse \"Big Al\" Kalazorn",
+   "where": "Butterskull Ranch",
+   "role": "Rancher.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Tibor Wester",
+   "where": "Loggers' Camp",
+   "role": "Runs the camp. Harbin's half-brother.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Don-Jon Raskin",
+   "where": "Mountain's Toe Gold Mine",
+   "role": "The mine's new overseer.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  },
+  {
+   "name": "Falcon the Hunter",
+   "where": "Falcon's Hunting Lodge",
+   "role": "Veteran hunter. His lodge makes a safe base.",
+   "met": false,
+   "attitude": null,
+   "your_note": ""
+  }
+ ],
+ "open_quests": [],
+ "treasure": [],
+ "party_coins": {
+  "pp": 0,
+  "gp": 0,
+  "ep": 0,
+  "sp": 0,
+  "cp": 0
+ },
+ "rulings": [],
+ "sessions": [],
+ "session_outline": [
+  {
+   "n": 0,
+   "title": "Session zero",
+   "prep": [
+    "Choose the rules edition",
+    "Make characters together",
+    "Hire sidekicks if there are one or two players",
+    "Agree how character death is handled"
+   ]
+  },
+  {
+   "n": 1,
+   "title": "Arrival and the job board",
+   "prep": [
+    "Read the booklet's running-the-adventure and Phandalin sections",
+    "Read all three tier 1 quests",
+    "Load the fight for whichever quest they are likeliest to pick",
+    "Plan a first dragon sighting that is a fly-over, not a fight"
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Second starting quest",
+   "prep": [
+    "Read the quest they did not pick",
+    "Level the party to 2 before, 3 after",
+    "Roll for the dragon"
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Third starting quest, or town",
+   "prep": [
+    "Post the three tier 2 quests",
+    "Let the party spend gold and meet townsfolk",
+    "Decide the home base"
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Tier 2, first quest",
+   "prep": [
+    "Read all three tier 2 quests",
+    "Check the party's magic weapons before Mountain's Toe"
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Tier 2, second quest",
+   "prep": [
+    "Level to 4 after",
+    "Post the three tier 3 quests"
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Tier 2, third quest or a side site",
+   "prep": [
+    "Use a side site if the party is wandering"
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Tier 3, first quest",
+   "prep": [
+    "Read all three tier 3 quests",
+    "If it is Axeholm, plan two sessions"
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Tier 3, continued",
+   "prep": [
+    "Level to 5 when four later quests are done"
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Tier 3, second quest",
+   "prep": [
+    "Make sure the party has heard where the dragon lairs"
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Tier 3, third quest",
+   "prep": [
+    "Level to 6 when six later quests are done"
+   ]
+  },
+  {
+   "n": 11,
+   "title": "Loose ends",
+   "prep": [
+    "Close open quests",
+    "Let the party prepare: potions, allies, the Dragon Barrow prize"
+   ]
+  },
+  {
+   "n": 12,
+   "title": "Icespire Hold",
+   "prep": [
+    "Read the lair twice",
+    "Load every fight in advance",
+    "Set the dragon's condition from Fixed results"
+   ]
+  }
+ ],
+ "prep_checklist": [
+  "Read the recap aloud and fix it",
+  "Open the booklet to tonight's pages",
+  "Load the fights you expect",
+  "Skim the people likely to appear",
+  "Check open quests",
+  "Lay out the map, quest cards and handouts",
+  "Pick one thing to cut if the night runs long",
+  "Roll for the dragon"
+ ]
+}

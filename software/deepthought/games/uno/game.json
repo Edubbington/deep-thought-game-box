@@ -1,0 +1,18 @@
+{
+  "id": "uno",
+  "name": "UNO",
+  "blurb": "Match, skip, shout",
+  "players": [
+    2,
+    6
+  ],
+  "order": 121,
+  "trackers": [
+    {
+      "name": "Hands won",
+      "start": 0,
+      "step": 1,
+      "min": 0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "tally",
+  "name": "Any game",
+  "blurb": "Turns and scores for anything",
+  "order": 90,
+  "players": [
+    1,
+    6
+  ],
+  "trackers": [
+    {
+      "name": "Score",
+      "start": 0,
+      "step": 1,
+      "min": null
+    }
+  ]
+}

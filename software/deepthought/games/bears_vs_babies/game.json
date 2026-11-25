@@ -1,0 +1,18 @@
+{
+  "id": "bears_vs_babies",
+  "name": "Bears vs Babies",
+  "blurb": "Build monsters, eat babies",
+  "players": [
+    2,
+    5
+  ],
+  "order": 100,
+  "trackers": [
+    {
+      "name": "Babies eaten",
+      "start": 0,
+      "step": 1,
+      "min": 0
+    }
+  ]
+}

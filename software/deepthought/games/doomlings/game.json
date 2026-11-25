@@ -1,0 +1,18 @@
+{
+  "id": "doomlings",
+  "name": "Doomlings",
+  "blurb": "Evolve before the world ends",
+  "players": [
+    2,
+    6
+  ],
+  "order": 107,
+  "trackers": [
+    {
+      "name": "Points",
+      "start": 0,
+      "step": 1,
+      "min": null
+    }
+  ]
+}

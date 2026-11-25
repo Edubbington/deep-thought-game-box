@@ -1,0 +1,272 @@
+Your Necron army
+
+
+
+
+  Your Necron army
+  A deep dive on the Necrons for the collection on your shelf: what each unit is for, how the
+  army plays in 11th edition, and the lore the box can tell. Unit stats and points are left out on
+  purpose; they are on the datasheets and in the Warhammer 40,000 app, and they change
+  with every balance update.
+
+
+
+  The one rule that makes Necrons Necrons
+  Reanimation Protocols. At the end of your Command phase, every Necron unit with this
+  ability gets D3 wounds back. Those wounds are spent in order: heal damaged models first,
+  then stand destroyed models back up. A unit that has been wiped out completely does
+  not come back.
+
+  What that means at the table:
+
+         Your opponent has to finish units off. A squad left on two models is a squad again two
+         turns later.
+         Big units get more from it than small ones, because there is more to bring back.
+         Half-killing three of your units is your opponent's worst result. Encourage it: give
+         them several targets, not one.
+
+
+  What you own, and what each unit is for
+
+     Unit                      You        Its job             How to use it
+                               have
+
+     Necron Warriors           20         Hold ground         Your objective holders. Walk them
+                                                              onto the middle objective and stay
+                                                              there. They re-roll their
+                                                              Reanimation dice, so they are the
+                                                              unit that benefits most from the
+                                                              army rule. Gauss flayers reach
+                                                              further; gauss reapers hit harder
+                                                              up close.
+
+
+
+
+                                                                                                Page 1 of 6
+Your Necron army
+
+
+
+
+     Unit                  You       Its job           How to use it
+                           have
+
+     Overlord              1         Leader            Joins a unit and makes it better.
+                                                       Put him with the Warriors for a
+                                                       tough anchor, or with the
+                                                       Lychguard for a hammer. He can
+                                                       carry an Enhancement.
+
+     Royal Warden          1         Shooting leader   Joins Warriors or Immortals and
+                                                       improves their shooting. With no
+                                                       Immortals yet, he goes with
+                                                       Warriors.
+
+     Lychguard             5         Bodyguard and     With warscythes they kill elite
+                                     melee             infantry and characters. With
+                                                       sword and shield they are very
+                                                       hard to shift. Either way they want
+                                                       to be near the Overlord.
+
+     Triarch Praetorians   5         Fast melee        They jump. Hold them back, then
+                                                       drop them onto a weak unit or an
+                                                       empty objective late in the game.
+                                                       They can charge again after falling
+                                                       back.
+
+     Canoptek              1         Big gun           Stays at the back and shoots the
+     Doomstalker                                       largest vehicle or monster it can
+                                                       see, every turn.
+
+     Canoptek Scarab       6 bases   Nuisance          Cheap and fast. Stand them where
+     Swarms                                            the enemy wants to arrive from
+                                                       reserve, do mission actions with
+                                                       them, or throw them in the way of
+                                                       a charge. Run them as two units of
+                                                       three.
+
+     C'tan Shard of the    1         Centrepiece       A star-god. Extremely hard to kill
+     Void Dragon                                       and at its best destroying vehicles.
+                                                       It is about a third of a 1,000-point
+                                                       army on its own, so it suits bigger
+                                                       games.
+
+
+
+
+                                                                                           Page 2 of 6
+Your Necron army
+
+
+
+
+  In 11th edition a unit can be joined by one Leader and one Support character. Which of
+  your two characters counts as which is printed on their datasheets; check before you
+  attach both to the same Warrior block.
+
+
+  Building an army in 11th edition
+
+     Game size      Points   Detachment Points        Enhancements     Copies of one unit
+
+     Incursion      1,000    2                        2                2
+
+     Strike Force   2,000    3                        4                3 (Battleline units: 6)
+
+
+  You spend Detachment Points (DP) on detachments. Each detachment gives one army-
+  wide bonus, a set of stratagems and a choice of Enhancements. Each also sets a Force
+  Disposition, which decides what kind of mission objectives you are given.
+
+  The Necron detachments that suit what you own:
+
+
+     Detachment         DP       What it does, in plain words      Fits your collection?
+
+     Awakened           3        Units led by a character hit      Yes. Simplest to play, and
+     Dynasty                     more easily.                      allowed as your only
+                                                                   detachment at 1,000 points.
+
+     Obeisance          2        Each turn you mark one enemy      Yes. Built for exactly your elite
+     Phalanx                     unit; your Overlord, Lychguard    units.
+                                 and Praetorians wound it more
+                                 easily.
+
+     Pantheon of        2        Built around C'tan Shards.        Yes, once you play the Void
+     Woe                                                           Dragon.
+
+     Hand of the        1        Warriors and Immortals can        Yes, for the Warriors. Cannot be
+     Dynasty                     advance and still shoot or do     combined with Awakened
+                                 actions.                          Dynasty.
+
+     Canoptek Court     2        Canoptek units and Crypteks       Partly: Doomstalker and
+                                 hit more reliably, more so in a   Scarabs only.
+                                 chosen zone.
+
+
+
+
+                                                                                                  Page 3 of 6
+Your Necron army
+
+
+
+
+     Detachment          DP     What it does, in plain words      Fits your collection?
+
+     Hypercrypt          2      Pull units off the table at the   Later. Powerful and fiddly.
+     Legion                     end of the enemy turn and
+                                bring them back elsewhere.
+
+
+  Other Necron detachments exist (Starshatter Arsenal, Annihilation Legion, Cursed
+  Legion, Cryptek Conclave, Skyshroud Spearhead, The Phaeron's Armoury); they reward
+  units you do not have yet.
+
+
+  Three ways to play your collection
+  First game: no Void Dragon, Awakened Dynasty. Overlord with ten Warriors, Royal
+  Warden with the other ten, Lychguard, Praetorians, Doomstalker, two Scarab units. One
+  rule to remember: units with a character hit better. Ask your opponent to bring a similar
+  amount.
+
+  The elite version: Obeisance Phalanx. Overlord with the Lychguard as the hammer,
+  Warriors as one block of twenty on the middle objective, Praetorians in reserve. Each
+  Command phase, mark the enemy unit you most need dead.
+
+  The big game: add the Void Dragon. At 2,000 points you have three Detachment Points,
+  so Pantheon of Woe can sit alongside a one-point detachment. The Void Dragon walks up
+  the middle and the rest of the army follows it.
+
+
+  How Necrons win
+     1. Stand on objectives and refuse to die. You score by being there at the right moment,
+        not by killing.
+     2. Never offer a unit that can be wiped in one go. Keep the Warriors in cover and
+         together.
+     3. Shoot one target until it is gone. Your opponent does not have Reanimation Protocols.
+         Finished units stay finished.
+     4. Save the fast pieces. Praetorians and Scarabs win games in the last two rounds by
+        taking objectives nobody is guarding.
+     5. Protect the characters. Half your bonuses switch off when a leader dies.
+
+  What Necrons are bad at: speed. Most of the army walks. Plan where you want to be on
+  turn three before you deploy.
+
+
+
+                                                                                                Page 4 of 6
+Your Necron army
+
+
+
+
+  The lore, for the box to tell
+  Who they were. The Necrontyr were a short-lived, bitter people who lost a war against
+  the Old Ones, the first masters of the galaxy. Desperate, they made a bargain with the
+  C'tan, beings of pure energy that fed on stars.
+
+  Biotransference. The C'tan gave the Necrontyr immortal bodies of living metal. The price
+  was everything else. Minds were copied into machines and souls were consumed. Nobles
+  kept their personalities; the common people became the near-mindless Warriors.
+
+  The War in Heaven. With their new bodies and the C'tan beside them, the Necrons
+  destroyed the Old Ones. Then their ruler, Szarekh the Silent King, turned on the C'tan in
+  revenge and shattered them into shards, which the Necrons now keep chained and use as
+  weapons.
+
+  The Great Sleep. Exhausted, the Necrons sealed themselves in tomb worlds to wait out
+  their remaining enemies. They slept for sixty million years. They are waking now, into a
+  galaxy full of younger species living on what they consider their property.
+
+  How they are organised. Dynasties, each ruled by a Phaeron, with Overlords and Lords
+  beneath. Crypteks are the technomancers who keep everything running. The Triarch
+  Praetorians are the old law-keepers, answerable to the Silent King and not to any one
+  dynasty. Lychguard are the nobles' personal guard. Canoptek constructs, the Scarabs and
+  Doomstalkers, are the maintenance machines of the tombs.
+
+  What has gone wrong. Sixty million years damaged many of them. Destroyers are
+  Necrons whose only remaining thought is ending all life. Flayed Ones carry a curse that
+  makes them crave flesh they can no longer use.
+
+  Names worth knowing. Imotekh the Stormlord, the great general of the Sautekh dynasty.
+  Szarekh, the Silent King, who has returned. Trazyn the Infinite, who collects people and
+  events for his museum. Orikan the Diviner, an astromancer who rewrites time when it
+  disagrees with him. Illuminor Szeras, who engineered biotransference and is still
+  experimenting.
+
+  Your Void Dragon. The C'tan called the Void Dragon was the war-god of machines, said to
+  command metal itself. Its shards are among the most dangerous things a dynasty can
+  field. Imperial legend holds that a great fragment lies buried beneath Mars.
+
+
+
+
+                                                                                          Page 5 of 6
+Your Necron army
+
+
+
+
+  Necrons in Kill Team
+  Two Necron kill teams exist: the Hierotek Circle (a Cryptek with Immortals and
+  Deathmarks) and the Canoptek Circle (a Cryptek with Canoptek constructs, from the
+  Tomb World box). Neither uses the models you own, but both play on the same idea:
+  things that get back up.
+
+
+  Sources for this tab
+         Wahapedia, Necrons faction page for 11th edition: army rule and the detachment list
+         with Detachment Point costs.
+         Warhammer Guild, "Necrons 1000 Point Army Lists for 11th Edition": game-size limits,
+         detachment summaries and unit roles.
+         Warhammer Community, "Faction Focus: Necrons" (May 2026) and the Necrons
+         Faction Pack: the three new detachments.
+         Warhammer Community, "How Army Building Works in the New Edition": battle sizes.
+
+
+
+
+                                                                                          Page 6 of 6
+

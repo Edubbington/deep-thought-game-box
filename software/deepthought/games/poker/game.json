@@ -1,0 +1,17 @@
+{
+  "id": "poker",
+  "name": "Poker",
+  "blurb": "Texas hold'em for the chip set",
+  "players": [
+    2,
+    6
+  ],
+  "order": 118,
+  "phases": [
+    "Blinds and deal",
+    "Flop",
+    "Turn",
+    "River",
+    "Showdown"
+  ]
+}

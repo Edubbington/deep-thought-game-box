@@ -1,0 +1,38 @@
+{
+ "README": [
+  "NAMES FROM MEMORY. NOT CHECKED. Check this list against your own mission deck: your deck wins.",
+  "This file holds names only, with a few words of my own saying what kind of thing each one rewards.",
+  "It holds no card text and must never hold any. The card in your hand says what actually scores.",
+  "To edit: change, add or delete lines in the list below. Keep the commas and quotes as they are.",
+  "name   = what the picker shows, at most 24 letters.",
+  "cap    = the most points that one secondary may hold for one player, or null for no limit.",
+  "         Every cap here is null because I could not check the numbers. Put your deck's in if you want them enforced.",
+  "scores = a short label in plain words, shown under the name. Yours to reword.",
+  "If this file is broken or missing the game still runs: the picker then only offers Type a name."
+ ],
+ "secondaries": [
+  {"name": "Assassination", "cap": null, "scores": "for destroying characters"},
+  {"name": "Bring It Down", "cap": null, "scores": "for destroying big targets"},
+  {"name": "Cull The Horde", "cap": null, "scores": "for destroying large squads"},
+  {"name": "Marked For Death", "cap": null, "scores": "for destroying chosen units"},
+  {"name": "No Prisoners", "cap": null, "scores": "for destroying units"},
+  {"name": "Overwhelming Force", "cap": null, "scores": "for kills on objectives"},
+  {"name": "Behind Enemy Lines", "cap": null, "scores": "for units in the enemy zone"},
+  {"name": "Engage On All Fronts", "cap": null, "scores": "for spreading across the table"},
+  {"name": "Area Denial", "cap": null, "scores": "for holding the middle"},
+  {"name": "Display Of Might", "cap": null, "scores": "for outnumbering in the middle"},
+  {"name": "Storm Hostile Objective", "cap": null, "scores": "for taking an enemy objective"},
+  {"name": "Defend Stronghold", "cap": null, "scores": "for keeping your home objective"},
+  {"name": "Secure No Man's Land", "cap": null, "scores": "for holding middle objectives"},
+  {"name": "Extend Battle Lines", "cap": null, "scores": "for holding home and middle"},
+  {"name": "A Tempting Target", "cap": null, "scores": "for holding a chosen objective"},
+  {"name": "Capture Enemy Outpost", "cap": null, "scores": "for holding the enemy's home"},
+  {"name": "Cleanse", "cap": null, "scores": "for an action on objectives"},
+  {"name": "Establish Locus", "cap": null, "scores": "for an action near the middle"},
+  {"name": "Sabotage", "cap": null, "scores": "for an action in terrain"},
+  {"name": "Recover Assets", "cap": null, "scores": "for actions across the table"},
+  {"name": "Investigate Signals", "cap": null, "scores": "for actions in the corners"},
+  {"name": "Deploy Teleport Homers", "cap": null, "scores": "for an action far forward"},
+  {"name": "Containment", "cap": null, "scores": "for units near the table edges"}
+ ]
+}

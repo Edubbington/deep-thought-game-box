@@ -1,0 +1,28 @@
+{
+  "id": "munchkin",
+  "name": "Munchkin Babies",
+  "blurb": "Kick doors, reach level ten",
+  "players": [
+    3,
+    6
+  ],
+  "order": 115,
+  "phases": [
+    "Kick open the door",
+    "Trouble or loot",
+    "Charity"
+  ],
+  "trackers": [
+    {
+      "name": "Level",
+      "start": 1,
+      "step": 1,
+      "min": 1,
+      "max": 10
+    }
+  ],
+  "win": {
+    "tracker": "Level",
+    "at": 10
+  }
+}

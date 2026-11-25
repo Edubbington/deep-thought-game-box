@@ -1,0 +1,418 @@
+Kill teams in depth
+
+
+
+
+  Kill teams in depth
+  The roster table in the main tab says who each team is and how hard it is. This tab goes
+  one level down: how each team wins, the one trick you have to learn to play it, and what to
+  do when it is across the table from you.
+
+  Team rules are free downloads and are rebalanced every quarter, so this tab describes
+  how a team plays, not its numbers. The team's own rules card is always the authority. Four
+  teams from 2026 boxes are covered in less detail because I have not verified their rules:
+  Celestian Insidiants, Spectre Squad, Legion of the Damned and Ork Boss Nobz.
+
+
+  Seven habits that win games with any team
+      1. Play the mission. Most points come from objectives and your Tac Op. Killing is one
+         third of the score at most.
+      2. Count activations. The player with operatives left to activate after the other has run
+         out gets free moves. Elite teams always have fewer; plan for it.
+      3. Conceal first, Engage when it pays. An operative on a Conceal order behind cover
+         cannot be shot from range. Only switch to Engage when you are about to do
+         something worth it.
+      4. Trade up. Losing a cheap operative to kill or pin an expensive one is a good exchange.
+      5. Activate the operative in danger first, or the one that will kill something before it can
+         act.
+      6. Stay within reach of cover. An operative in the open at the end of a turning point is
+         usually dead in the next.
+      7. Save a command point for a re-roll when one dice decides the game.
+
+
+  Elite teams (about six operatives)
+
+     Team               How it wins              The trick to learn        Playing against it
+
+     Angels of          Each Marine shoots or    Choosing your two         Ignore kills. Out-
+     Death              fights twice in an       Chapter Tactics before    activate them and sit
+                        activation and shrugs    the game to suit the      on objectives they
+                        off small-arms fire.     opponent.                 cannot reach.
+
+
+
+
+                                                                                                Page 1 of 9
+Kill teams in depth
+
+
+
+
+     Team             How it wins                The trick to learn        Playing against it
+
+     Plague Marines   They walk forward and      Patience. They are        Make them walk.
+                      do not die; hits against   slow, so every move       Score early, and
+                      them are reduced.          must head toward an       concentrate fire on
+                      Poison wears enemies       objective.                one at a time.
+                      down.
+
+     Legionaries      Marines with a Mark        Matching marks to         Find out which
+                      of Chaos each, tuning      roles when you build      operatives carry
+                      them for melee,            the team.                 which mark and avoid
+                      shooting, toughness                                  each one's strength.
+                      or speed.
+
+     Deathwatch       A specialist for every     Each operative is         Kill the one built to
+                      job, with special          different; learn what     counter your team
+                      ammunition for the         each is for.              first.
+                      right target.
+
+     Phobos Strike    Stealthy Marines that      Using their pre-game      Keep your operatives
+     Team             deploy forward,            positioning and           in pairs so nothing is
+                      disrupt enemy tricks       scramblers at the right   isolated.
+                      and pick off isolated      moment.
+                      models.
+
+     Nemesis Claw     Night Lords who strike     Staying hidden until      Light them up. They
+                      from the dark and          the turn you all strike   are ordinary Marines
+                      frighten enemy             together.                 once seen.
+                      operatives into acting
+                      worse.
+
+     Legion of the    Spectral Marines from      Not yet verified.         Not yet verified.
+     Damned           the Armageddon box,
+                      reported to grow
+                      stronger as the game
+                      goes on.
+
+     XV26 Stealth     A handful of hard-         Keeping their stealth     Close the distance.
+     Battlesuits      hitting suits that are     active by controlling     They want to stay at
+                      difficult to target.       range and lines of        arm's length.
+                                                 sight.
+
+
+
+
+                                                                                                   Page 2 of 9
+Kill teams in depth
+
+
+
+
+     Team             How it wins              The trick to learn     Playing against it
+
+     Raveners         Five or six fast         Deciding who goes      Stay grouped; a lone
+                      monsters that tunnel     underground and        operative is a meal.
+                      under the board and      where they surface.    Shoot them as they
+                      come up where they                              surface.
+                      like.
+
+     Wrecka Krew      Tough Orks with          Getting close enough   Keep range. Their
+                      rokkits, bombs and       to use short-ranged    best weapons are
+                      hammers. Everything      explosives without     short-ranged or
+                      they hit breaks.         being shot first.      inaccurate.
+
+     Ork Boss Nobz    Heavily armoured elite   Not yet verified.      Not yet verified.
+                      Orks from the
+                      Armageddon box.
+
+     Murderwing       Raptors that fly over    Picking the turn to    Hold a reserve to
+                      terrain and land         commit; they are       punish wherever they
+                      wherever the enemy is    fragile for Marines    land.
+                      weakest.                 once stuck in.
+
+
+
+
+  Mid-sized teams (seven to ten operatives)
+
+     Team             How it wins              The trick to learn     Playing against it
+
+     Kasrkin          Disciplined shooting     Spending the points    Force them into
+                      with a pool of skill     where they swing a     melee, where the
+                      points to spend on       fight, not evenly.     points help least.
+                      being better at
+                      whatever is needed.
+
+     Scout Squad      Pre-game tricks:         Choosing the right     Check where the
+                      mines, forward moves,    pre-game option for    mines and the sniper
+                      a sniper already in      the map.               are before your first
+                      place.                                          move.
+
+
+
+
+                                                                                           Page 3 of 9
+Kill teams in depth
+
+
+
+
+     Team             How it wins              The trick to learn        Playing against it
+
+     Wolf Scouts      Aggressive scouts        Placing that effect to    Fight on the side of
+                      with an area effect      cut the board in two.     the board it does not
+                      that shapes where the                              cover.
+                      enemy can safely
+                      stand.
+
+     Tempestus        Some operatives start    Deciding who drops,       Leave no undefended
+     Aquilons         off the board and drop   and when.                 corner for them to
+                      in where they choose.                              land in.
+
+     Hunter Clade     Skitarii who switch      Picking the doctrine      Attack on the turn
+                      battle doctrine each     for the turn you are      they chose to shoot;
+                      turning point:           about to have.            shoot on the turn
+                      accurate now, tough                                they chose to defend.
+                      later.
+
+     Battleclade      Slow, sturdy servitors   Keeping the               Kill the tech-priest.
+                      directed by a tech-      controller alive and in   The rest get worse
+                      priest.                  range of his              immediately.
+                                               machines.
+
+     Hearthkyn        Tough Kin who mark       Timing grudges so         Kill cleanly. A
+     Salvagers        enemies that hurt        the mark lands on         wounded Kin is one
+                      them and then hit the    what you need dead.       with a grudge.
+                      marked ones harder.
+
+     Hernkyn          Fast Kin scouts who      Using their extra         Contest objectives
+     Yaegirs          reposition and           movement to be on         early; do not chase
+                      resupply.                objectives first.         them.
+
+     Celestian        Stealthy elite Sisters   Not yet verified.         Not yet verified.
+     Insidiants       from the Shadowhunt
+                      box.
+
+     Sanctifiers      A preacher's             Staying bunched           Explosives and flame.
+                      congregation that        without becoming          Split them up.
+                      stacks blessings on      one target for a blast.
+                      operatives standing
+                      together.
+
+
+
+
+                                                                                              Page 4 of 9
+Kill teams in depth
+
+
+
+
+     Team             How it wins                 The trick to learn       Playing against it
+
+     Novitiates       Sister trainees who         Earning points early     Deny the acts that
+                      earn faith points for       so they are there on     earn points: stay out
+                      brave acts and spend        the turning point that   of their melee reach.
+                      them on small               matters.
+                      miracles.
+
+     Inquisitorial    A small core plus           Building a different     Ask what they
+     Agents           troops borrowed from        roster for each          brought and why
+                      other teams, with           opponent. Hard.          before the game
+                      tools that switch                                    starts.
+                      enemy abilities off.
+
+     Elucidian        A Rogue Trader's crew       Knowing all nine         Kill the leader and the
+     Starstriders     of unique characters        operatives; no two       specialists holding it
+                      with support from           are alike.               together.
+                      their ship in orbit.
+
+     Blades of        Aspect Warriors: your       Each aspect has its      Find out which
+     Khaine           choice of shooting          own technique to use     aspects are present
+                      Avengers, stealthy          at the right moment.     and deny each its
+                      Scorpions and                                        preferred range.
+                      charging Banshees.
+
+     Void-dancer      Harlequins who vault        Positioning for the      Catch them after they
+     Troupe           terrain as if it were not   next turn, not this      commit. They die to
+                      there and strike in a       one. Hard.               almost anything that
+                      set performance.                                     connects.
+
+     Corsair          Quick Aeldari pirates       Using the free move      Trap them. They win
+     Voidscarred      with strong melee           to shoot from cover      by never being where
+                      weapons and a free          and get back behind      your guns point.
+                      small move.                 it.
+
+     Hand of the      Drukhari who grow           Spending pain tokens     Their armour is poor.
+     Archon           stronger each time an       before you lose the      Shoot first and they
+                      operative dies, theirs      operative holding        fold.
+                      or yours.                   them.
+
+     Mandrakes        Shadow creatures that       Seeing which terrain     Stay away from heavy
+                      step from one patch of      counts as shadow on      terrain edges; that is
+                      darkness to another.        this map.                where they arrive.
+
+
+
+
+                                                                                                Page 5 of 9
+Kill teams in depth
+
+
+
+
+     Team              How it wins              The trick to learn        Playing against it
+
+     Hierotek Circle   A Cryptek with           Keeping the Cryptek       Stand on the fallen
+                       Immortals and            alive; it runs the        operative's marker so
+                       Deathmarks. Fallen       reanimation.              it cannot return.
+                       Necrons can stand
+                       back up.
+
+     Canoptek Circle   A Cryptek directing      Using the constructs      The Cryptek again.
+                       constructs that repair   as the Cryptek's          Kill it.
+                       each other.              hands across the
+                                                board.
+
+     Exodite Dragon    Three riders on          Mounted movement          You have many more
+     Masters           dinosaurs. Each model    and when to fight as      activations. Use them
+                       is a whole fire team.    rider or as beast.        to take the board.
+
+     Goremongers       Stimm-crazed Khorne      Arriving together, not    Shoot them on the
+                       cultists who exist to    one at a time.            way in. Screen with
+                       reach melee.                                       something cheap.
+
+     Warpcoven         Sorcerers casting        Which power, on           Kill sorcerers. Small-
+                       powers, guarded by       whom, when. The           arms fire bounces off
+                       slow, bulletproof        hardest team to learn.    Rubrics, so do not
+                       Rubric Marines.                                    waste it.
+
+
+
+
+  Horde teams (eleven or more operatives)
+
+     Team              How it wins              The trick to learn        Playing against it
+
+     Death Korps       Fourteen guardsmen       Issuing the right order   Blast and flame
+                       following orders. They   each turn and             weapons. Kill the
+                       win by being             accepting losses.         officer and the
+                       everywhere.                                        comms operator.
+
+     Imperial Navy     Boarding troops with     Leading with the shield   Fight them in the
+     Breachers         shields and door-        and working as pairs.     open, not in
+                       breaching charges.                                 corridors.
+                       Best in tight spaces.
+
+
+
+
+                                                                                               Page 6 of 9
+Kill teams in depth
+
+
+
+
+     Team             How it wins               The trick to learn        Playing against it
+
+     Exaction Squad   Arbites with              Using shields at the      Outrange them.
+                      shotguns, shields and     front and marking one     Shotguns are short.
+                      a cyber-mastiff, built    target for the squad.
+                      to pin and control.
+
+     Ratlings         Halfling snipers who      Never ending an           Rush them. They
+                      shoot and immediately     activation where you      cannot fight and they
+                      move again.               can be seen.              cannot take a hit.
+
+     Spectre Squad    Cadian recon troops       Not yet verified.         Not yet verified.
+                      with a vox beacon,
+                      from the Terror on
+                      Devlan box.
+
+     Blooded          Traitor guardsmen         Feeding tokens to the     Kill the Ogryn and
+                      who gain blood tokens     operatives that matter,   the Enforcer before
+                      as things die and         including the Ogryn.      the tokens build up.
+                      spend them on
+                      boosts.
+
+     Chaos Cult       Weak cultists who         Timing the mutations      Kill them early, while
+                      mutate during the         so the monsters arrive    they are still only
+                      game into terrifying      when the fighting         cultists.
+                      melee monsters.           starts.
+
+     Fellgor          Beastmen who charge       Committing                Expect a dead
+     Ravagers         and keep fighting for a   everything on one         Beastman to swing
+                      moment after they         turn.                     once more. Do not
+                      should be dead.                                     finish them in melee
+                                                                          if you can shoot.
+
+     Gellerpox        A few tough mutants       Using the vermin to       Ignore the vermin
+     Infected         plus a swarm of           block and the hulks to    unless they are on an
+                      vermin that clog the      kill.                     objective.
+                      board.
+
+     Kommandos        Sneaky Orks with a        Staying concealed until   Deal with the bomb
+                      specialist for            the charge.               squig at range. Do
+                      everything, a grot and                              not let them all arrive
+                      a bomb squig.                                       at once.
+
+
+
+
+                                                                                               Page 7 of 9
+Kill teams in depth
+
+
+
+
+     Team                How it wins              The trick to learn        Playing against it
+
+     Pathfinders         T'au who mark targets    The order you activate    Kill the drones and
+                         with lasers, then the    in: markers first, guns   the marker
+                         whole team shoots        second.                   operatives. Get into
+                         what is marked.                                    melee.
+
+     Vespid              Winged aliens with       Flight: they ignore       Punish them where
+     Stingwings          short-ranged blasters    terrain but end           they land.
+                         that melt armour.        exposed.
+
+     Farstalker          Kroot hunters with       Using their out-of-turn   Take the open ground
+     Kinband             hounds, hard to pin      repositioning to stay     and make them come
+                         down in cover.           unseen.                   out.
+
+     Wyrmblade           Cultists with a          Hidden deployment         Find the sniper and
+                         gunslinger, a sniper     and getting the two       the gunslinger first.
+                         and a talent for         specialists into
+                         appearing where they     position.
+                         should not be.
+
+     Brood Brothers      Infected guardsmen       Choosing the              Kill the leaders.
+                         led by either a          leadership option for     Without them it is a
+                         monster or a pair of     the opponent.             weak Guard team.
+                         cult leaders.
+
+
+
+
+  Which team for whom
+          A first game for two new players: Angels of Death against Plague Marines. Six models
+          each, forgiving, and they come in the Starter Set.
+          Someone who wants to shoot: Kasrkin, then Pathfinders.
+          Someone who wants to charge: Kommandos or Fellgor Ravagers.
+          Someone who likes puzzles: Mandrakes, Warpcoven or Void-dancers, after a few
+          games.
+          Someone who owns Necrons: Hierotek Circle or Canoptek Circle keeps the same
+          look and idea on a small board.
+
+
+
+
+                                                                                                 Page 8 of 9
+Kill teams in depth
+
+
+
+
+  Sources for this tab
+          Games Workshop, Kill Team team rules (free downloads in Kill Team: The App and on
+          Warhammer Community).
+          Goonhammer, Kill Team 2024 team reviews, including Hierotek Circle.
+          Warhammer Community, "The Big Autumn Preview: the Legion of the Damned enter
+          the killzone" (September 2026) and the quarterly balance updates.
+
+
+
+
+                                                                                         Page 9 of 9
+

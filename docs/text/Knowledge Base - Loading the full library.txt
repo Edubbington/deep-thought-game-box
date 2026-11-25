@@ -1,0 +1,225 @@
+Loading the full library
+
+
+
+
+   Loading the full library
+   This tab says what goes on the box for each game, where it comes from, and how to load
+   it. The other tabs teach the games in the box's own words. This one is about putting the
+   actual rules text, cards and your own books on the box so it can look things up.
+
+
+
+   The short version
+          Officially free material loads in full. That covers more than it used to: the 40k core
+          rules and every faction pack, every kill team's rules, the D&D rules document (SRD
+          5.2.1), every Magic card, and Magic's complete rulebook.
+          Paid books load from your own copies. Codexes, the Kill Team core book, D&D
+          rulebooks and campaign books go in a folder called mine . The box indexes them page
+          by page and answers with the book name and page number.
+          I can't supply the text of paid books. They are copyrighted, so none of it is in this
+          document or in the loader. The loader only reads files you give it.
+
+
+   What is free, and what your books add
+
+     Game                  Free and official                      What your own books add
+
+     Warhammer             Core rules PDF. A faction pack for     Codexes: the full detachment list,
+     40,000                every faction, with 11th edition       lore, Crusade rules. Mission card
+                           datasheets and detachments.            decks.
+                           Points in the online Munitorum
+                           Field Manual.
+
+     Kill Team             Lite rules PDF. Rules for every kill   The full core rulebook, mission
+                           team.                                  packs, narrative books.
+
+     D&D                   SRD 5.2.1 (2024 rules) and SRD 5.1     Everything outside the SRD: most
+                           (2014 rules), both under a Creative    subclasses, most named
+                           Commons licence.                       monsters and settings, every
+                                                                  campaign.
+
+     Magic                 Every card with its current wording    Nothing needed.
+                           and rulings (Scryfall). The
+                           Comprehensive Rules.
+
+
+
+
+                                                                                                    Page 1 of 5
+Loading the full library
+
+
+
+
+   Two limits worth knowing:
+
+          The 40k app and D&D Beyond do not export files. A codex code unlocks the codex
+          inside the official app only. Books you own there or on paper need your own digital
+          copy or your own scan before the box can index them. Whether to scan a book you
+          own is your decision.
+          The Munitorum Field Manual is now a web page, not a PDF. Open it in a browser and
+          use Print, then Save as PDF, and drop that file in the free/wh40k folder.
+
+
+   Where to get the free material
+
+     What                           Where                         File to save
+
+     40k core rules, faction        Warhammer Community           One PDF each
+     packs                          downloads
+
+     Kill Team Lite rules and       Kill Team downloads           One PDF each
+     team rules
+
+     D&D SRD 5.2.1                  D&D Beyond SRD page            SRD_CC_v5.2.1.pdf
+
+     Magic Comprehensive            Magic rules page              The TXT version
+     Rules
+
+     Magic cards and rulings        Scryfall bulk data            Downloaded for you by
+                                                                   fetch-mtg
+
+
+
+
+   Folder layout
+   Make a folder called content with this shape. The game folder names must be exactly
+    wh40k , killteam , dnd and mtg .
+
+
+
+
+                                                                                            Page 2 of 5
+Loading the full library
+
+
+
+
+      content/
+        free/
+          wh40k/      Core Rules.pdf, Faction Pack - Necrons.pdf, ...
+          killteam/   Lite Rules.pdf, one PDF per kill team
+          dnd/        SRD_CC_v5.2.1.pdf
+          mtg/        MagicCompRules.txt
+        mine/
+          wh40k/      Codex Necrons.pdf, ...
+          killteam/   Core Book.pdf
+          dnd/        Players Handbook.pdf, Monster Manual.pdf, ...
+          dnd/campaigns/   Curse of Strahd.pdf, ...   (DM only)
+
+
+   The file name becomes the book name the box says out loud, so name files the way you
+   want them read: Players Handbook.pdf , not phb_final_v2.pdf .
+
+   Anything inside a folder called campaigns is DM only. Player lookups never show it, and
+   the box only uses it in DM mode.
+
+
+   Loading it
+   Do this on a PC, then copy content.db to the Pi. It also runs on the Pi, only slower.
+
+      1. Install the one extra piece the loader needs: pip install pypdf
+      2. Index every file in free and mine : python3 dt_content.py sync content
+      3. Download and load every Magic card: python3 dt_content.py fetch-mtg content
+      4. Load the Magic rulebook: python3 dt_content.py mtg-rules
+          content/free/mtg/MagicCompRules.txt
+      5. Check what went in: python3 dt_content.py stats
+
+   Run step 2 again whenever you add, replace or delete a file. It only re-reads files that
+   changed.
+
+   Try it from the command line before it goes on the box:
+
+            python3 dt_content.py search "restrained" --game dnd
+
+            python3 dt_content.py card "llanowar"
+            python3 dt_content.py search "room 14" --game dnd --dm
+
+
+
+
+                                                                                              Page 3 of 5
+Loading the full library
+
+
+
+
+   What the loader reads
+
+     File type             How it is split                   What the box quotes
+
+     PDF                   One entry per page                Book name and page number
+
+     EPUB                  One entry per chapter             Book name and chapter number
+
+     Markdown              One entry per heading             Book name and heading
+
+     Plain text            Parts of about 3,500 characters   Book name and part number
+
+
+   Things that will not load, and what the loader says:
+
+          A scanned PDF with no text layer. The loader reports NO TEXT FOUND . Run the file
+          through OCR first (the free tool ocrmypdf does this), then sync again.
+          A copy-protected EPUB. The loader reports it and skips it. It does not try to remove
+          the protection.
+          Photos and other file types. Reported as not supported and skipped.
+
+
+   How the box uses the library
+          Lookup screens search the library directly. No internet needed.
+          Spoken questions work like this: the box finds the three best-matching entries, sends
+          them with your question to the cloud model, and shows an answer that names the
+          book and page. This means short excerpts of your own books leave the box when you
+          ask a question. Campaign books are only ever sent in DM mode.
+          Magic card lookups show the card's current official wording, legal formats and
+          rulings. The screen credits Scryfall.
+          D&D answers from the SRD carry the credit line the licence asks for: material from
+          SRD 5.2.1 by Wizards of the Coast LLC, used under CC BY 4.0. The full credit sits in
+          Settings, About.
+
+
+   What has been tested, and what has not
+   Tested here, 51 checks, all passing:
+
+          PDF, EPUB, Markdown and text files load, with correct page and chapter numbers,
+          including a PDF with a blank page in the middle.
+
+
+
+                                                                                            Page 4 of 5
+Loading the full library
+
+
+
+
+          A changed file is re-indexed, a deleted file is removed, and an unchanged file is left
+          alone.
+          Campaign files are hidden from player search and visible in DM mode.
+          Scanned PDFs, protected EPUBs and unsupported files are reported without
+          stopping the run.
+          Card import, search by name, partial name, back-face name and rules text, two-faced
+          cards, rulings.
+          A full-size card file (36,000 cards, 153 MB) loaded using 24 MB of memory, so it fits a Pi
+          2.
+          The Magic rulebook layout: numbered rules, examples, glossary, both common text
+          encodings.
+
+   Not tested: the real downloads. My workspace could not reach Scryfall, Wizards or
+   Warhammer Community, so every test used small made-up files in the same layout as the
+   real ones. Expect one round of fixes after your first real run. The likeliest trouble spots:
+
+          Two-column rulebook PDFs sometimes come out with the columns interleaved.
+          Search still works, but excerpts may read oddly.
+          Datasheet tables in faction packs may lose their column alignment.
+          The fetch-mtg download has never run against the live Scryfall service.
+
+   Send me the output of stats and one or two odd-looking search results and I will fix the
+   loader against the real files.
+
+
+
+
+                                                                                               Page 5 of 5
+

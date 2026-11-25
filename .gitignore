@@ -1,0 +1,21 @@
+# big binary folders kept outside git (they are in DeepThought_everything.zip)
+stl/
+reference_photos/
+cad/blender/
+
+# made by running things
+software/.venv/
+software/shots/
+__pycache__/
+*.pyc
+shot-*.png
+
+# the owner's own books, card data and the library built from them: never in git
+content/
+content.db
+software/content/
+software/content.db
+
+# keys and private settings
+config.toml
+software/data/

@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "Win chips. A hand is won by holding the best five cards at the end, or by being the last player who has not folded. This is Texas hold'em."},
+ {"title": "The deal", "text": "The dealer button moves one seat left each hand. The two players after it post the small blind and the big blind before any cards are seen. Everyone is then dealt two cards face down."},
+ {"title": "The betting rounds", "text": "There are four. Before the flop, with only your own two cards. After the flop, which is three shared cards face up. After the turn, a fourth. After the river, a fifth.\n\nIn each round a player may fold, call the current bet, or raise it. With no bet in front of you, you may check. A round ends when everyone left has put in the same amount."},
+ {"title": "The showdown", "text": "If two or more players remain after the last bet, they show their cards. Each makes the best five-card hand from their own two and the five on the table, using any mix. The best hand takes the pot. Equal hands share it."},
+ {"title": "Hands, best first", "text": "Straight flush. Four of a kind. Full house. Flush. Straight. Three of a kind. Two pair. One pair. High card.\n\nAn ace may be high, or low in a straight from ace to five."},
+ {"title": "What I do", "text": "Press the button as each stage is dealt and I will keep the place. Chip values and blinds are yours to agree: I do not hold the bank."}
+]

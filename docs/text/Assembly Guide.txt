@@ -1,0 +1,878 @@
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Deep Thought Game Night Box — Assembly
+  Guide
+    Nov 13, 2026 · ​@Ethan I
+
+
+
+  How to use this guide
+  Each step is a picture, then a few short actions. Do the Parts in order. Nothing is glued
+  until the step says Glue.
+
+
+                  Image — Exploded view of the five printed parts: head bell, chin plate, core, base plat…
+
+
+
+  The five printed parts, in the order they stack.
+
+
+                            Image — Cutaway of the assembled box with every component in place
+
+
+
+  Where everything ends up. Dark blue = display glass, green = Pi, black = speaker, red = amp
+  and button, yellow = LED ring, grey = power jack and ballast, silver = magnets.
+
+  On the bench
+
+        Five printed parts: riser, base plate, core, head bell, chin plate
+        Pi 2 + microSD card, 5" DSI display with its ribbon and screws
+        Amp + speaker kit, LED ring, one 30 mm arcade button
+        Wi-Fi nano, USB mic (optional)
+        5 V 3 A power supply, panel-mount micro-USB extension
+        Jumper wires, screw kit, six 6 × 3 mm magnets, foam tape, zip ties, ballast (washers or
+        coins)
+
+  Tools: soldering iron, small Phillips screwdriver, flush cutters, hobby knife, sandpaper,
+  super glue, epoxy, drill with 3 mm and 2 mm bits.
+
+
+  Part 1 — Printed parts
+  You have printed everything except the corrected chin plate. Print settings and bed
+  pictures are in the Print reference at the end.
+
+
+
+                                                                                                             Page 1 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+    Part                File                                          Status
+
+    Riser               DeepThought_4_Riser.stl                       Printed
+
+    Base                DeepThought_3_BasePlate_v3.3.stl              Printed
+    plate
+
+    Core                DeepThought_2_Core_legs_dome.stl              Printed
+
+    Head bell           DeepThought_1a_HeadBell_v4.stl                Printed
+
+    Chin                DeepThought_1b_HeadChin_v4.3.stl              Print this one. Flat side down, no
+    plate                                                             supports.
+
+
+  If you already printed chin plate v4.2, keep it. The only difference is that v4.3 has the three
+  screw pilot holes in its edge; on v4.2 you drill them yourself in Step 8.3.
+
+
+  Part 2 — Prep
+
+  Step 2.1 — Clean the prints
+     1. Remove supports and brims.
+     2. Run a knife around every hole and slot to clear strings.
+     3. Lightly sand the top of the core and the flat underside of the chin plate.
+
+
+  Step 2.2 — Trim the riser's top edge
+
+
+                  Image — Riser interior: ballast trays, zip-tie anchors, power-jack slot; top edge trimm…
+
+
+
+     1. Cut off what is left of the thin failed lip along the top of the riser wall.
+     2. Sand the wall top flat all the way round.
+
+  Check: the base plate drops onto the riser and does not slide.
+
+
+  Step 2.3 — Test-fit the chin plate on the core
+
+
+                 Image — Chin plate lifted above the core: the core's wall, its magnet pocket, and the w…
+
+
+
+
+                                                                                                             Page 2 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+                Image — Underside of the chin plate: three channels, three magnet pockets, wire opening
+
+
+
+     1. Find the 2 mm wall on top of the core. It is in three pieces: front edge, left edge, one
+        diagonal.
+     2. Find the three matching channels on the flat underside of the chin plate.
+     3. Lower the chin plate so each wall piece drops into its channel.
+
+  Check: the chin plate sits flat on the core and does not rock. It only fits one way round.
+
+
+                          Image — Cross-cut: the core's wall standing inside the chin plate's channel
+
+
+
+  Seated: the wall stands in its channel with 0.4 mm of room on each side and on top.
+
+
+  Step 2.4 — Magnets
+     1. Stack all six magnets. Draw a line across the top of the stack with a marker. Peel them
+        apart.
+     2. Glue three into the chin plate's pockets, marked side in, with a drop of epoxy.
+     3. Glue three into the core's top pockets, marked side out.
+     4. Press each one flush, wipe the excess, and let it cure.
+
+  Check: once cured, the chin plate snaps down onto the core.
+
+
+  Step 2.5 — Test-fit the parts
+  Nothing is fastened yet. You are only checking that each part goes where it should.
+
+        Button into the 28 mm hole at the front of the base plate.
+        Power jack into the slot in the riser's back wall.
+        Speaker into the slot on the inside right wall of the bell.
+        Display into the pocket behind the window, glass facing out.
+
+  The display is about 8 mm thick and the pocket is 8 mm deep, so its back should sit level
+  with the rim. It is held by three printed clamp tabs (Step 6.2).
+
+
+
+
+                                                                                                          Page 3 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Part 3 — The riser
+
+  Step 3.1 — Power jack
+
+
+                                    Image — Riser back wall with the 14 × 9 mm power-jack slot
+
+
+
+     1. Hold the jack in the slot from the inside, port facing out.
+     2. Mark its two ear holes on the wall. Drill them 3 mm.
+     3. Fasten the jack with two M3 screws.
+     4. Leave its cable coiled inside the riser.
+
+
+  Step 3.2 — Ballast
+
+
+                  Image — Riser with the micro-USB jack in the back-wall slot and ballast in the two trays
+
+
+
+     1. Fill the two floor trays with washers or coins, about 100–150 g in total.
+     2. Glue them in with a bead of glue so they cannot rattle.
+     3. Loop a loose zip tie through each of the two floor anchors.
+
+
+  Part 4 — The base plate
+
+  Step 4.1 — Button leads
+
+
+               Image — Back of the button with the two switch tabs and the LED + and LED – tabs labell…
+
+
+
+  Safety check at first power-up: the button's light should come on before you press it. If it is
+  dark, do not press the button; unplug and check which tabs the blue wires are on.
+
+     1. Take four jumper wires and cut one connector off each, keeping the wire full length.
+        Each lead must reach from the button to the Pi in the head, about 35 cm; if your
+        jumpers are shorter, solder two end to end.
+     2. Solder two to the switch tabs (COM and NO).
+     3. Solder two to the LED tabs (+ and –).
+
+
+
+                                                                                                             Page 4 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+     4. Label them with tape: SW, SW, LED+, LED–.
+
+
+  Step 4.2 — Button and LED ring
+
+
+               Image — Base plate with the LED ring centred on the wire hole and the arcade button thr…
+
+
+
+  Prepare the ring's leads first. The ring has two 3-wire leads soldered to its back. Read the
+  tiny labels on the pads: the lead on the pads marked DI (or DIN) is the input and is the one
+  you use. Cut the plastic connector off that lead and solder each wire to a purple jumper
+  that has had one connector cut off: red (5V), green (DI), black (GND). Cover each joint
+  with heat-shrink. The other lead, on the pads marked DO, is not used: leave its connector
+  on and tuck it down the wire hole.
+
+     1. Push the button through the front hole from above. Tighten its nut from below.
+     2. Set the LED ring on the flat top, LEDs up, centred on the 30 mm wire hole. The plate
+        has no recess for it.
+     3. Stick the ring down with three small squares of foam tape.
+
+
+  Step 4.3 — Bring the leads up through the wire hole
+
+
+                   Image — Base plate cut in half, seen from below: the hollow underside and button hole
+
+
+
+     1. Run the four button leads under the plate and up through the wire hole.
+     2. Bring the power cable's plug up through the same hole.
+     3. Set the plate on the riser: button at the front, power jack at the back. Do not glue it;
+        the ring under the plate holds it in place.
+
+  Check: three things stick up through the middle of the LED ring: button leads, ring leads,
+  power plug.
+
+
+
+
+                                                                                                           Page 5 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Part 5 — The core
+
+  Step 5.1 — Thread the wires up the neck
+
+
+                Image — Core cut in half: the neck channel runs from the top plate down into the hollow…
+
+
+
+     1. Drop a piece of string down the 14 mm channel in the top of the core.
+     2. Tie the power plug to it and pull the plug up through, from the dome end to the top.
+     3. Pull the ring leads and button leads through the same way, a couple at a time.
+
+
+  Step 5.2 — Set the core on the plate
+
+
+                      Image — Core from above: magnet pockets, wall pieces, neck-channel exit, dome
+
+
+
+     1. Lower the core so the dome is centred over the LED ring.
+     2. Take up the slack in the leads as you lower it, so nothing is trapped under the dome's
+        rim.
+     3. Hold it in place with two small squares of foam tape under the feet. Do not glue it yet.
+
+  The core has no pegs or sockets. It sits flat on the plate (the dome's rim and two feet) and
+  is glued down in Part 10, after the LED test shows the glow is centred.
+
+
+  Part 6 — The head
+  Work with the bell upside down on a towel, open side up, window facing you.
+
+
+                Image — Head bell from the front: screen window, rim screw holes, speaker grille, open …
+
+
+
+
+                            Image — Looking into the open bottom of the bell with everything fitted
+
+
+
+  This is what you are building: display and Pi at the front, speaker on the right wall, amp on
+  the back wall.
+
+
+
+
+                                                                                                           Page 6 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Step 6.1 — Pi onto the display
+
+
+                  Image — Back of the 5 inch DSI display, labelled: four Pi standoffs, ribbon socket, bac…
+
+
+
+  Your display, seen from the back. The dashed outline is where the Pi sits.
+
+     1. Lay the display face down, the way it is in the photo. Check the Backlight switch is on.
+     2. Set the Pi on the four brass standoffs, chips facing you: SD card end toward the
+        ribbon socket, USB ports toward the backlight switch. It only fits this way round; the
+        other way it hangs off the edge.
+     3. Fasten it with the four screws from the display's box.
+     4. Push one end of the ribbon into the display's ribbon socket and the other into the Pi's
+        DISPLAY socket (lift each latch, slide in, press closed).
+     5. Leave the 2-pin fan header empty. The display gets its power through the ribbon;
+        there are no power leads to connect.
+
+
+  Step 6.2 — Display into the bell
+
+
+                 Image — Section through the loaded bell, right side: display glass against the window l…
+
+
+
+  Which way up: put the display in with its backlight-switch edge at the bottom (toward
+  the open bottom of the bell), so the printed text on its back is upside down. That points
+  the Pi's power socket down toward the neck, where the power cable comes from, and
+  keeps the USB ports away from the speaker. If the picture is upside down at first boot,
+  Step 9.6 flips it.
+
+     1. Pass the display and Pi in through the open bottom, glass toward the window.
+     2. Push it forward into the pocket until the glass meets the lip.
+     3. Find the three small screw holes in the rim beside the pocket: two on the left, one at
+        the top right. (The lower right has none; the speaker slot is there.) Screw a printed
+        clamp tab (DeepThought_5_DisplayTabs.stl) onto each with an M3 screw 8 to 10 mm
+        long, long end pointing over the display. Just snug.
+
+
+
+
+                                                                                                             Page 7 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Step 6.3 — Speaker
+
+
+                   Image — Head bell cut open, right half: speaker slot, side zip-tie slots, wiring pad fo…
+
+
+
+  The speaker is held by two small printed blocks
+  (DeepThought_6_SpeakerEarBlocks_v3.stl; the file has four, two are spares). Each block
+  sits on the front of one ear and is screwed to the grille from outside.
+
+
+                 Image — Top-down diagram: speaker behind the grille wall, a printed block in front of e…
+
+
+
+     1. Hold a block against the front of one ear (the cone side), flat face on the ear, slanted
+        edges facing forward, hugging the side of the speaker body.
+     2. From behind the ear, drive an M2.5 × 8 screw through the ear hole into the block hole
+        next to the speaker body. Repeat for the other ear.
+     3. Tilt the speaker and work it up into the slot, cable side down, cone toward the grille
+        holes, the same way it goes in on its own.
+     4. From outside the bell, find the middle row of grille holes (the longest row). Push an
+        M2.5 × 8 screw through the second hole from each end of that row into the block
+        behind it. Snug, not tight.
+     5. Lead the speaker wire toward the back wall.
+
+
+  Step 6.4 — Amp, Wi-Fi and mic
+
+
+                 Image — Section through the loaded bell, left side: USB stack with Wi-Fi nano and mic, …
+
+
+
+     1. Plug the speaker into the amp.
+     2. Stick the amp to the pad on the back wall with foam tape, pins toward the Pi.
+     3. Plug the kit's cable into the amp.
+     4. Plug the Wi-Fi nano and the mic into the Pi's USB ports.
+
+
+
+
+                                                                                                              Page 8 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Step 6.5 — Wire the amp
+  The amp's own cable ends in five female connectors that push straight onto the Pi; no
+  jumpers needed. Follow each wire back to the label printed on the amp, then: G (black) to
+  pin 9, V (red) to pin 4, BCL (blue) to pin 12, LRC (green) to pin 35, DIN (yellow) to pin 40.
+  Go by the printed labels if your wire colours differ. Leave the leads from the base for Part
+  8.
+
+
+  Part 7 — Wiring
+  Pin numbers are physical pin numbers. Pin 1 is the corner pin nearest the SD card slot; odd
+  numbers are the inner row.
+
+
+                  Image — Pi 2 40-pin header wiring map, each label in the colour of the actual wire: red…
+
+
+
+
+                                                                                                             Page 9 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+    Device            Wire                     Pi pin
+
+    Display           ribbon                   DISPLAY connector
+
+    Amp               VIN / 5 V                4
+
+    Amp               GND                      9
+
+    Amp               BCLK                     12
+
+    Amp               LRC / WS                 35
+
+    Amp               DIN                      40
+
+    LED ring          DIN (data in)            19
+
+    LED ring          GND                      14
+
+    LED ring          5V                       5 V splice
+
+    Button            SW (either lead)         11
+
+    Button            SW (other lead)          20 (GND)
+
+    Button            LED +                    5 V splice
+
+    Button            LED –                    25 (GND)
+
+    Power             micro-USB plug           Pi's power socket
+
+
+  The 5 V splice. The amp takes 5 V from pin 4. The LED ring and the button LED share pin 2:
+  twist together the bare top ends of the ring's 5 V lead and the button's LED + lead with a
+  short stub of jumper that still has its female connector, solder and cover with heat-shrink.
+  The stub plugs onto pin 2.
+
+  Before power: nothing on pin 1 or pin 17, and no 5 V lead on any numbered GPIO pin. That
+  is the one mistake that kills a Pi.
+
+        Ring: data goes to the pad marked DIN, not DOUT.
+        Amp: leave GAIN and SD unconnected.
+        Button LED: lit whenever the box is on. If it stays dark, swap its two leads.
+
+
+  Part 8 — Closing it up
+  Pi unpowered for this whole part.
+
+
+
+                                                                                        Page 10 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Step 8.1 — Leads through the chin plate
+     1. Hold the loose chin plate above the core, flat side down.
+     2. Pass every lead from the neck up through its round opening.
+     3. Let the chin plate rest on the core.
+
+
+  Step 8.2 — Plug in
+     1. Hold the bell just above the chin plate, window to the front.
+     2. Plug the ring, button and splice leads onto the Pi per the Part 7 table.
+     3. Plug the power cable into the Pi's micro-USB power socket.
+
+
+  Step 8.3 — Close the bell
+
+
+               Image — Head bell from behind: vent slots, crown magnet pockets, back chin-plate screw …
+
+
+
+     1. Lift the chin plate up into the bell. Its raised lip goes inside the bell wall; the mouth
+        faces the front.
+     2. Drive three M2.5 screws through the bell's three small holes (one at the back, one
+        near each front corner) into the chin plate's edge. Snug, not tight.
+
+  Chin plate v4.2 only: with the plate seated, drill 2 mm through each of the three bell holes
+  about 6 mm into the chin plate first.
+
+
+  Step 8.4 — Head onto the core
+     1. Feed the slack down the neck as you lower the head.
+     2. Line the channels up with the core's wall pieces and let it drop. The magnets click.
+
+  Check: no rocking. If it rocks, a magnet is standing proud; press it flush.
+
+
+  Step 8.5 — Tidy the base and look it over
+
+
+                                 Image — The assembled box: head on core on base plate on riser
+
+
+
+     1. Lift the plate, fold the spare power cable in a Z and zip-tie it to the riser anchors. Set
+        the plate back.
+
+
+
+
+                                                                                                          Page 11 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+     2. Shine a light down the neck. Look for a jumper that has popped off, or a bare wire
+        touching a board.
+
+
+  Part 9 — Software
+  You do this on the Chromebook or any computer with an SD card slot, before the first
+  power-up. The Pi 2 is 32-bit only, so pick the 32-bit images throughout.
+
+  Step 9.1 — Flash the card. Install Raspberry Pi Imager from raspberrypi.com/software.
+  Choose Raspberry Pi 2 as the device, Raspberry Pi OS Lite (32-bit) as the OS, and your SD
+  card as the storage. Before writing, click Edit settings: set the hostname to deepthought ,
+  a username and password, your Wi-Fi network and country, and on the Services tab turn
+  on SSH with password authentication. Write the card.
+
+  Step 9.2 — Edit config.txt. When Imager finishes, pop the card out and back in; a drive
+  called bootfs appears. Open config.txt in a text editor and add these lines at the end:
+
+     # Deep Thought game night box
+     dtparam=audio=off
+     dtoverlay=hifiberry-dac
+     dtparam=spi=on
+     display_auto_detect=1
+
+
+  The first two switch the Pi's built-in headphone audio off and route I2S to the amp.
+  spi=on enables the pin the LED ring uses. The display line lets the DSI panel enumerate
+  itself; the Hosyond 5" needs no extra driver on current Raspberry Pi OS. Save, eject the
+  card and put it in the Pi.
+
+  Step 9.3 — First connection. Power the box on. Wait about two minutes for the first boot
+  to resize the filesystem and join Wi-Fi. From the Chromebook's terminal (or any SSH
+  client), connect with ssh <your-user>@deepthought.local . If .local doesn't resolve,
+  find the Pi's IP address in your router's device list.
+
+  Step 9.4 — Update and install the basics.
+
+     sudo apt update && sudo apt full-upgrade -y
+     sudo apt install -y python3-pip python3-pygame python3-gpiozero python3-
+     spidev alsa-utils git
+     sudo pip3 install --break-system-packages pi5neo adafruit-circuitpython-
+     neopixel-spi
+
+
+
+
+                                                                                         Page 12 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+   pygame is the lightweight UI that will draw the touchscreen screens (a browser is too
+  heavy for the Pi 2). gpiozero reads the buttons. neopixel-spi drives the ring over SPI
+  pin 19 without needing root or the PWM pin.
+
+  Step 9.5 — Point audio at the amp. Run aplay -l . You should see a card named
+  sndrpihifiberry . Make it the default:
+
+     sudo tee /etc/asound.conf > /dev/null <<'EOF'
+     pcm.!default { type hw card sndrpihifiberry }
+     ctl.!default { type hw card sndrpihifiberry }
+     EOF
+
+
+  Step 9.6 — Touch input and screen rotation. The Hosyond panel reports touch as a
+  standard USB-HID-style input, so pygame sees finger taps as mouse clicks with nothing
+  extra. If the picture is upside down relative to how the panel sits in the head, add
+   display_lcd_rotate=2 to config.txt and reboot; touch follows the rotation.
+
+  Step 9.7 — Make it start on boot. Create a folder ~/deepthought , drop the game app
+  there (we'll build it together next), and add a systemd service so it runs at power-on
+  without a login:
+
+     sudo tee /etc/systemd/system/deepthought.service > /dev/null <<'EOF'
+     [Unit]
+     Description=Deep Thought game night box
+     After=multi-user.target
+     [Service]
+     User=<your-user>
+     WorkingDirectory=/home/<your-user>/deepthought
+     ExecStart=/usr/bin/python3 main.py
+     Restart=on-failure
+     Environment=SDL_VIDEODRIVER=kmsdrm
+     [Install]
+     WantedBy=multi-user.target
+     EOF
+     sudo systemctl enable deepthought
+
+
+  Leave it disabled (skip the last line) until the hardware tests in Part 10 all pass.
+
+
+  Part 10 — First boot and tests
+  Run these in order over SSH. Each one proves one subsystem, so a failure points straight
+  at the part to check.
+
+
+                                                                                           Page 13 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+  Test 1 — Power. Plug the PSU into the panel jack and flip its switch. The Pi's red PWR LED
+  should come on solid and the green ACT LED should flicker within a few seconds. Run
+   vcgencmd get_throttled once logged in; throttled=0x0 means the supply is good.
+  Anything with 0x50000 in it means under-voltage: shorten or thicken the micro-USB
+  extension, or check the jack's screws aren't pinching the cable.
+
+  Test 2 — Display. The console text should appear on the 5" panel during boot. If it is black,
+  see Troubleshooting. Run ls /dev/input/ and tap the screen; a new event* device with
+   evtest (install with sudo apt install evtest ) should print coordinates when you
+  touch.
+
+  Test 3 — Sound. speaker-test -c 1 -t sine -f 440 -l 2 plays two seconds of an A
+  note through the grille. Then aplay /usr/share/sounds/alsa/Front_Center.wav plays a
+  voice sample. Nothing? Confirm aplay -l lists sndrpihifiberry , then re-seat the amp's
+  BCLK/LRC/DIN jumpers.
+
+  Test 4 — LED ring. Save this as ringtest.py and run it with python3 ringtest.py :
+
+     import time, board, neopixel_spi as neopixel
+     ring = neopixel.NeoPixel_SPI(board.SPI(), 16, brightness=0.3,
+     auto_write=False)
+     for i in range(16):
+            ring.fill((0,0,0)); ring[i] = (0, 120, 255); ring.show();
+     time.sleep(0.08)
+     ring.fill((40, 0, 80)); ring.show(); time.sleep(2)
+     ring.fill((0,0,0)); ring.show()
+
+
+  One blue LED should chase around the ring and then the whole ring should glow purple
+  under the dome. Wrong colours or random flicker: add the level shifter or shorten the data
+  lead.
+
+  Now glue the core. With the ring lit, turn the core until the glow is even all round the
+  dome. Mark the feet's position on the plate with a pencil, lift the core, run super glue
+  around the dome's rim and under both feet, and set it back on the marks. Hold for a
+  minute. Keep glue away from the ring.
+
+  Test 5 — Button. Save as buttontest.py and run it with python3 buttontest.py :
+
+
+
+
+                                                                                             Page 14 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+     from gpiozero import Button
+     from signal import pause
+     btn = Button(17, pull_up=True, bounce_time=0.05)
+     btn.when_pressed = lambda: print("pressed")
+     btn.when_released = lambda: print("released")
+     print("Press the button (Ctrl-C to quit)")
+     pause()
+
+
+  Each press prints once. Nothing prints: check one switch lead is on pin 11 and the other on
+  pin 20. Prints twice per press: raise bounce_time to 0.1.
+
+  Test 6 — Wi-Fi and reboot. ping -c 3 raspberrypi.com confirms the nano Wi-Fi is up.
+  Then sudo reboot ; when it comes back and you can SSH in again without touching
+  anything, the box is finished. Enable the service from Step 9.7 once the game software is
+  on it.
+
+  Done. Put the magnets' spare set in the parts drawer, snap a photo of the header wiring
+  for later, and set the box on the table. The next conversation is the software: the narrator,
+  the game modes, and the touchscreen screens.
+
+
+  Troubleshooting
+
+    Symptom                                    Likely cause             Fix
+
+    Red PWR LED off                            No power reaching the    Check PSU switch, the jack's
+                                               Pi                       cable is fully in the Pi's socket,
+                                                                        and the extension isn't pinched in
+                                                                        the slot
+
+    Lightning-bolt icon on                     Voltage drop in the      Use a shorter/thicker extension
+    screen, or throttled not                   micro-USB extension      or a 3 A supply; make sure the
+    0x0                                                                 ring is under 50 % brightness
+
+    Display stays black                        DSI ribbon reversed or   Pull the latch up, re-seat the
+                                               not latched              ribbon with contacts toward the
+                                                                        HDMI port, press latch down;
+                                                                        check the Backlight switch on
+                                                                        the display's back is on
+
+
+
+
+                                                                                                     Page 15 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+    Symptom                                    Likely cause              Fix
+
+    Display works, no touch                    Touch not enumerated      Confirm
+                                                                         display_auto_detect=1 in
+                                                                         config.txt; check dmesg | grep
+                                                                         -i touch
+
+    Picture upside down                        Panel mounted rotated     display_lcd_rotate=2 in
+                                               in head                   config.txt
+
+    No sound at all                            Audio still on            dtparam=audio=off and
+                                               headphone jack            dtoverlay=hifiberry-dac
+                                                                         present? aplay -l shows
+                                                                         sndrpihifiberry?
+
+    Sound crackles or is faint                 DIN/BCLK/LRC              Swap jumpers per Part 7 table; tie
+                                               swapped, or gain          GAIN to GND for more volume
+
+    Buzz from the speaker when                 Shared GND bounce         Run ring GND to a different GND
+    the ring lights                                                      pin from the amp; add a 100 µF
+                                                                         cap across the ring's 5 V/GND
+
+    Ring stays dark                            Data on DOUT instead      Move to DIN pad; check
+                                               of DIN, or SPI off         dtparam=spi=on ; ls
+                                                                         /dev/spidev* should list
+                                                                         spidev0.0
+
+    Ring flickers or wrong                     3.3 V data marginal       Add 74AHCT125 level shifter, or
+    colours                                                              shorten data lead to under 15 cm
+
+    Only the first few LEDs light              Brightness too high for   Drop brightness to 0.3; move
+                                               5 V supply                ring 5 V to the splice, not a GPIO
+
+    Button prints twice                        Mechanical bounce         Raise bounce_time in software
+
+    Button never prints                        COM not on GND, or        Check both leads; confirm GPIO
+                                               wrong GPIO                number matches the Part 7 table
+
+    Button LED dark                            Polarity                  Swap the two LED leads; the EG
+                                                                         Starts LEDs are polarised
+
+    No Wi-Fi                                   Adapter not seen          lsusb should show a MediaTek
+                                                                         7601 device; ip a should show
+                                                                         wlan0; re-run Imager's Wi-Fi
+                                                                         settings if the country code was
+                                                                         missed
+
+
+
+                                                                                                       Page 16 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+    Symptom                                    Likely cause               Fix
+
+    Can't SSH to                               mDNS not resolving         Use the IP from your router's
+    deepthought.local                          from Chromebook            device list
+
+    Head rocks on core                         Magnet proud, or lip       Press magnets flush; lightly sand
+                                               rubbing                    the core's locating lip
+
+    Speaker rattles                            Speaker loose in cradle    Add one more zip tie through the
+                                                                          slots; a strip of foam tape behind
+                                                                          the speaker frame
+
+    Wires visible at the neck                  Rope too short or          Pull slack down into the riser; re-
+                                               routed outside channel     route through the 14 mm neck
+                                                                          channel
+
+
+
+
+  Print reference
+  For reprints only. Every STL loads already turned the right way; do not re-orient it.
+
+
+    File                                               Size on        Sits on the bed         Supports
+                                                       bed (mm)
+
+    DeepThought_4_Riser.stl                            191 × 165 ×    Open side up            None
+                                                       44
+
+    DeepThought_3_BasePlate_v3.3.stl                   191 × 165 ×    Flat top down           None
+                                                       28
+
+    DeepThought_2_Core_legs_dome.stl                   171 × 138 ×    Upright                 Tree, build
+                                                       77                                     plate only
+
+    DeepThought_1a_HeadBell_v4.stl                     181 × 176 ×    Flat top down, open     None
+                                                       139            bottom up
+
+    DeepThought_1b_HeadChin_v4.3.stl                   153 × 141 ×    Flat underside          None
+                                                       13             down, lip up
+
+
+  Settings: 0.4 mm nozzle, 0.28 mm layers, 3 walls, 4 top and bottom layers, 15 % gyroid infill.
+  5 mm brim on the bell and core. Print the core in the clear PETG so the dome glows;
+  everything else in blue.
+
+
+
+
+                                                                                                          Page 17 of 18
+Deep Thought Game Night Box — Assembly Guide
+
+
+
+
+                                               Image — Riser STL on the print bed
+
+
+
+
+                            Image — Base plate on the bed: locating ring standing up, flat top down
+
+
+
+
+                                               Image — Core STL on the print bed
+
+
+
+
+                                 Image — Head bell v4 on the bed: flat top down, open bottom up
+
+
+
+
+                                                                                                      Page 18 of 18
+

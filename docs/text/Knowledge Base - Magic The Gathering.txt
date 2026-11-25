@@ -1,0 +1,294 @@
+Magic: The Gathering
+
+
+
+
+  Magic: The Gathering
+  What the box needs to teach Magic to a new player and to keep track of a game for people
+  who already play. Card text always wins over anything here; this tab explains how the
+  game works, not what any card does.
+
+
+
+  What Magic is
+  Each player is a wizard with a deck of cards. You start with 20 life (40 in Commander). You
+  play lands to make mana, spend mana to cast spells, and use creatures and other spells to
+  bring your opponents' life to zero.
+
+  Ways to lose: your life reaches 0; you have to draw a card and your library is empty; you
+  collect ten poison counters; in Commander, one opponent's commander deals you 21
+  combat damage over the game.
+
+
+  The five colours
+
+     Colour            Land       What it is good at
+
+     White             Plains     Many small creatures, protection, life gain, order
+
+     Blue              Island     Drawing cards, countering spells, flying, trickery
+
+     Black             Swamp      Killing creatures, bringing things back from the
+                                  graveyard, power at a price
+
+     Red               Mountain   Direct damage, speed, haste, chaos
+
+     Green             Forest     Big creatures, extra mana, growth
+
+
+  Most decks use one to three colours. More colours means more options and more games
+  where you draw the wrong lands.
+
+
+  Card types
+         Land: makes mana. You may play one per turn. Not a spell.
+         Creature: attacks and blocks. Has power and toughness, written as 2/3. Stays on the
+         battlefield.
+
+
+
+
+                                                                                         Page 1 of 6
+Magic: The Gathering
+
+
+
+
+         Sorcery: a one-off effect. Only on your own turn, in a main phase.
+         Instant: a one-off effect you can cast at almost any time, including on someone else's
+         turn.
+         Enchantment: a lasting effect that stays on the battlefield.
+         Artifact: an object that stays on the battlefield. Equipment is an artifact you attach to
+         a creature.
+         Planeswalker: an ally with loyalty counters and abilities you use once per turn.
+         Opponents can attack it.
+         Battle: a card you attack to flip into something better.
+
+  Anything that stays on the battlefield is called a permanent.
+
+
+  A turn, step by step
+  This is what the box announces when it is running the turn.
+
+
+     Phase             Step                  What happens
+
+     Beginning         Untap                 Untap everything you control.
+
+                       Upkeep                "At the beginning of your upkeep" effects happen.
+
+                       Draw                  Draw a card. In a two-player game, whoever goes
+                                             first skips this on turn one.
+
+     First main                              Play a land. Cast anything.
+
+     Combat            Beginning of combat   Last chance to act before attackers are chosen.
+
+                       Declare attackers     Tap the creatures that attack and say who or what
+                                             each one attacks.
+
+                       Declare blockers      The defender chooses which untapped creatures
+                                             block which attackers.
+
+                       Damage                Creatures deal damage equal to their power.
+                                             Unblocked attackers hit the player.
+
+                       End of combat
+
+     Second main                             Play a land if you have not yet. Cast anything.
+
+     Ending            End step              "At the beginning of the end step" effects happen.
+
+
+
+
+                                                                                               Page 2 of 6
+Magic: The Gathering
+
+
+
+
+     Phase             Step                   What happens
+
+                       Cleanup                Discard down to seven cards. Damage wears off
+                                              creatures.
+
+
+
+
+  Six rules new players get wrong
+     1. Summoning sickness. A creature cannot attack, or use an ability that taps it, on the
+        turn it arrives. It can still block.
+     2. Tapping. Attacking taps a creature. A tapped creature cannot block. Deciding what to
+        hold back is half the game.
+     3. Blocking is the defender's choice. The attacker chooses which creatures attack; the
+        defender chooses who blocks what.
+     4. Damage wears off. A 2/3 that takes 2 damage survives, and is fully healed at end of
+        turn.
+     5. Instants and abilities use the stack. When someone casts a spell, everyone gets a
+        chance to respond. The last thing added happens first.
+     6. A countered or destroyed card goes to the graveyard, not back to the hand.
+
+
+  The stack, in one example
+  You cast a spell to give your creature +3/+3. Before it happens, your opponent responds
+  with a spell that deals 2 damage to that creature. Their spell was cast last, so it happens
+  first, and your creature may die before the boost arrives. If you had another instant, you
+  could respond to their response. When everyone passes, the stack empties from the top
+  down.
+
+
+  Keywords the box should explain on request
+
+     Keyword            Meaning
+
+     Flying             Can only be blocked by creatures with flying or
+                        reach.
+
+     Reach              Can block creatures with flying.
+
+
+
+
+                                                                                              Page 3 of 6
+Magic: The Gathering
+
+
+
+
+     Keyword           Meaning
+
+     Trample           Extra damage beyond what kills the blocker carries
+                       over to the player.
+
+     First strike      Deals combat damage before creatures without it.
+
+     Double strike     Deals damage twice: once with first strike, once
+                       normally.
+
+     Deathtouch        Any damage it deals to a creature destroys that
+                       creature.
+
+     Lifelink          Damage it deals also gains you that much life.
+
+     Vigilance         Attacking does not tap it.
+
+     Haste             Ignores summoning sickness.
+
+     Menace            Must be blocked by two or more creatures.
+
+     Defender          Cannot attack.
+
+     Flash             Can be cast whenever you could cast an instant.
+
+     Hexproof          Opponents cannot target it with spells or abilities.
+
+     Ward              An opponent who targets it must pay an extra cost
+                       or the spell is countered.
+
+     Indestructible    Damage and "destroy" effects do not destroy it.
+
+     Scry N            Look at the top N cards of your library; put any of
+                       them on the bottom.
+
+
+
+
+  Formats: the ways to play
+
+     Format                Deck                                Life     Notes
+
+     Starter and           Whatever you have, usually 60       20       The way to learn.
+     kitchen-table         cards
+
+     Standard              60 cards or more, up to four        20       Recent sets only. Sets rotate
+                           copies of a card                             out over time.
+
+
+
+
+                                                                                                   Page 4 of 6
+Magic: The Gathering
+
+
+
+
+     Format                Deck                             Life   Notes
+
+     Commander             Exactly 100 cards, one copy of   40     Usually four players. The
+                           each, led by a legendary                most popular way to play.
+                           creature
+
+     Draft and Sealed      40 cards built from packs        20     Everyone starts equal.
+                           opened that day
+
+
+  Commander's extra rules. Your commander starts in the command zone and can be cast
+  from there. Each time it has been cast from there before, it costs 2 more. Your deck may
+  only contain cards in your commander's colours. 21 combat damage from one commander
+  knocks a player out.
+
+  Mulligans. If your opening seven is unplayable, shuffle it back, draw seven again, and put
+  one card on the bottom for each mulligan you have taken. In multiplayer games the first
+  one is free.
+
+
+  What the box does at a Magic table
+         Life totals for two to four players, in large numbers, with plus and minus buttons and a
+         history so a disputed total can be traced.
+         Commander damage grid: who has dealt how much to whom, with a warning at 21.
+         Counters: poison, energy, experience, and the monarch and initiative markers.
+         Turn prompts: the box names each step as the button is pressed. Useful for teaching;
+         switched off for experienced tables.
+         Who goes first: a roll-off with commentary.
+         Keyword lookup: hold the button and ask "what does ward do".
+         Dice and coin flips.
+         Turn timer for slow four-player games, with a dry remark when someone takes too
+         long.
+
+  It does not know what individual cards do and does not judge card interactions. For a real
+  dispute, the card text and the official rules decide.
+
+
+
+
+                                                                                               Page 5 of 6
+Magic: The Gathering
+
+
+
+
+  Teaching a first game
+     1. Use two simple decks. The Foundations Beginner Box is made for this: it walks two
+         players through a scripted first game and then gives them themed half-decks to mix.
+     2. Play the first game with hands face up. The box announces each step.
+     3. Explain lands and mana on turn one, creatures and summoning sickness on turn two,
+        attacking and blocking on turn three.
+     4. Leave instants and the stack until someone holds one and wants to use it.
+     5. Play a second game with hands hidden.
+     6. For a group of four, move to Commander with ready-made decks. Wizards released a
+         set of beginner-oriented Foundations Commander decks in October 2026.
+
+
+  Words a new player will hear
+  Tap: turn a card sideways to show it has been used. Library: your deck. Graveyard: your
+  discard pile. Exile: removed from the game. Mana value: the total cost of a card. Token: a
+  permanent made by an effect, not a card. Counter (verb): cancel a spell. Counter (noun):
+  a marker on a card, such as +1/+1. Removal: a spell that gets rid of a creature. Ramp:
+  getting extra mana early. Aggro, control, combo: fast decks, slow decks, and decks that
+  win with a specific set of cards.
+
+
+
+  Sources for this tab
+         Wizards of the Coast, Magic: The Gathering Foundations product pages and
+         "Collecting Foundations": the Beginner Box and Foundations' place in Standard.
+         Wizards of the Coast, "Foundations Commander Decklists" (release 2 October 2026).
+         Magic Madhouse, "Magic: The Gathering Formats Guide" (May 2026): Standard and
+         Commander rules summary.
+
+
+
+
+                                                                                           Page 6 of 6
+

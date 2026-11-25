@@ -1,0 +1,15 @@
+{
+  "id": "pixel_tactics",
+  "name": "Pixel Tactics",
+  "blurb": "Guard your leader, 2 players",
+  "players": [
+    2,
+    2
+  ],
+  "order": 117,
+  "phases": [
+    "Vanguard wave",
+    "Flank wave",
+    "Rear wave"
+  ]
+}

@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "Each player has five face-down Security cards. Attack until the other player has none left, then land one more attack on them. A player who must draw from an empty deck also loses."},
+ {"title": "The memory gauge", "text": "Both players share one gauge. Playing a card costs memory, and paying moves the counter toward your opponent's side. When it passes zero and lands on their side your turn ends at once, and they begin with whatever memory you handed them. Spend carefully."},
+ {"title": "A turn", "text": "Stand your rested cards upright. Draw one. Then the breeding phase: hatch an egg from your egg deck, or move a hatched Digimon up to the battle area. Then the main phase, where you play cards and attack until you run out of memory or choose to stop."},
+ {"title": "Digivolving", "text": "Place a Digimon from your hand on top of one in play that meets its level and colour, pay the smaller digivolve cost instead of the full cost, and draw a card. The cards underneath stay as its sources and may still lend it effects."},
+ {"title": "Attacking", "text": "Turn a Digimon sideways to attack the player or one of their rested Digimon. Against a Digimon, compare power: the lower one is deleted. Against the player, flip their top Security card. If it is a Digimon, the two fight. If it has a security effect, that happens."},
+ {"title": "What I do not carry", "text": "Card text decides the details, and the cards are in front of you, not me. Press the button when a turn ends and I will keep count."}
+]

@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "The world is ending and everyone knows it. Play trait cards to build the best-scoring species before the third catastrophe. Highest total wins."},
+ {"title": "Setting up", "text": "Build the Ages deck in three stacks, each with one catastrophe shuffled among ordinary ages. Deal each player five traits. Five is your gene pool: the number of cards your hand returns to at the end of each turn."},
+ {"title": "A round", "text": "The first player turns over the next Age card. It may set a rule for the round. Then each player in turn plays one trait from hand into their own trait pile, does what it says, and finally draws or discards to match their gene pool."},
+ {"title": "Traits", "text": "Each trait has a colour and a point value, and many have an action when played or a bonus at the end. Dominant traits are powerful, and you may never have more than two."},
+ {"title": "Catastrophes", "text": "A catastrophe changes everyone's gene pool and does something unpleasant. The third one ends the world: apply its world's end effect, then everyone adds up their traits and bonuses."},
+ {"title": "What I do not carry", "text": "The effects are printed on the cards. I will keep the turn order and, if you tap the names at the end, the scores."}
+]

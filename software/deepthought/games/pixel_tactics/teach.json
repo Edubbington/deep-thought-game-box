@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "Each player commands a leader and a small squad on a three by three grid. Defeat the other leader and you win."},
+ {"title": "Setting up", "text": "Both players have the same deck. Draw five cards, choose one as your leader and place it in the centre of your grid with its leader side showing. The front row is the vanguard, the middle row the flank, and the back row the rear."},
+ {"title": "One card, several jobs", "text": "Every card can be a leader, a hero or an order. As a hero it has three different abilities, and which one applies depends on the row it stands in. Read the whole card before you place it."},
+ {"title": "Waves", "text": "A round has three waves: vanguard, then flank, then rear. In each wave both players take two actions, the first player going first. The first player changes each round.\n\nRecruiting and attacking are done with the row whose wave it is."},
+ {"title": "Actions", "text": "Draw a card. Recruit a hero from your hand into the current row. Attack with a hero in the current row. Play a card as an order and discard it. Move a hero to another space. Clear a defeated hero off the grid."},
+ {"title": "Attacks and the fallen", "text": "A melee attack can only reach the first unit in a column. Ranged attacks and abilities say what they can hit. Damage stays on a unit. A hero with damage equal to its life is defeated at the end of the wave and lies where it fell until someone clears it."}
+]

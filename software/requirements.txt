@@ -1,0 +1,7 @@
+# On a PC:  pip install -r requirements.txt
+# On the Pi these come from apt instead (see PI_SETUP.md), plus gpiozero and spidev.
+pygame>=2.5
+pypdf
+qrcode
+anthropic        # optional: answers in her own words
+reportlab        # only for running test_dt_content.py and test_dt_characters.py

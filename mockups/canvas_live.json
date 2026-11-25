@@ -1,0 +1,136 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-21T03:25:34Z"
+ },
+ "title": "Deep Thought \u2014 Screen Mockups",
+ "launch": {
+  "view": "canvas"
+ },
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Home"
+  },
+  "PickGame.dc.html": {
+   "x": 880,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Pick a game"
+  },
+  "Setup.dc.html": {
+   "x": 1760,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Game setup"
+  },
+  "GameOver.dc.html": {
+   "x": 2640,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Game over"
+  },
+  "Play.dc.html": {
+   "x": 0,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Play: main screen"
+  },
+  "Scoreboard.dc.html": {
+   "x": 880,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Play: scoreboard"
+  },
+  "ScoreSheet.dc.html": {
+   "x": 1760,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Play: end-of-round score sheet"
+  },
+  "TeachStep.dc.html": {
+   "x": 2640,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Teach mode: one step"
+  },
+  "Ask.dc.html": {
+   "x": 0,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Ask: listening"
+  },
+  "Lookup.dc.html": {
+   "x": 880,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Lookup: answer card"
+  },
+  "Encyclopedia.dc.html": {
+   "x": 1760,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Encyclopedia: a faction"
+  },
+  "Dice.dc.html": {
+   "x": 2640,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Dice roller"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "PickGame.dc.html",
+  "Setup.dc.html",
+  "GameOver.dc.html",
+  "Play.dc.html",
+  "Scoreboard.dc.html",
+  "ScoreSheet.dc.html",
+  "TeachStep.dc.html",
+  "Ask.dc.html",
+  "Lookup.dc.html",
+  "Encyclopedia.dc.html",
+  "Dice.dc.html"
+ ],
+ "notes": {
+  "row0": {
+   "x": 0,
+   "y": -260,
+   "text": "Start and finish",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row1": {
+   "x": 0,
+   "y": 640,
+   "text": "During a game",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row2": {
+   "x": 0,
+   "y": 1540,
+   "text": "Asking and looking things up",
+   "kind": "title1",
+   "maxW": 3440
+  }
+ },
+ "designSystems": []
+}

@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "Capture the other player's flag. You also win if they have no piece left that can move."},
+ {"title": "Setting up", "text": "Each player arranges forty pieces in the four rows nearest them, with the ranks facing away from the other player. Where you hide the flag and the bombs is most of the game. Red moves first."},
+ {"title": "Moving", "text": "Move one piece one square forward, backward or sideways, never diagonally, and never into the two lakes. Bombs and the flag never move. A scout may run any number of empty squares in a straight line.\n\nA piece may not shuttle back and forth between the same two squares more than three times running."},
+ {"title": "Attacking", "text": "Move onto a square holding an enemy piece. Both players say their rank. The lower rank is removed. If they are equal, both go. The winner takes the square.\n\nWhich end of the numbers is the strong end depends on the edition. Check the box you have: the Marshal is the strongest either way."},
+ {"title": "The exceptions", "text": "A bomb destroys anything that attacks it and stays where it is, except a miner, which removes it. The spy defeats the Marshal, but only when the spy makes the attack. Attacked by anything, the spy loses."},
+ {"title": "The pieces", "text": "One Marshal, one General, two Colonels, three Majors, four Captains, four Lieutenants, four Sergeants, five Miners, eight Scouts, one Spy, six Bombs and one Flag."}
+]

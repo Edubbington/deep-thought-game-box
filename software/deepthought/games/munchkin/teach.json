@@ -1,0 +1,9 @@
+[
+ {"title": "The aim", "text": "Everyone starts at level one. The first to reach level ten wins, and the tenth level must come from beating a monster."},
+ {"title": "Setting up", "text": "Deal each player four Door cards and four Treasure cards. Play any items you like in front of you straight away."},
+ {"title": "A turn", "text": "First, kick open the door: turn the top Door card face up. A monster must be fought. A curse lands on you. Anything else goes into your hand.\n\nIf there was no monster, you may either look for trouble by fighting a monster from your hand, or loot the room by drawing a Door card face down.\n\nLast comes charity: if you hold more than five cards, give the extras to the lowest-level player."},
+ {"title": "Fighting", "text": "Add your level to the bonuses on your items. If your total is higher than the monster's level, you win, go up a level and draw its treasures. A tie is a loss.\n\nAny other player may make it harder for you with cards, and one player may help you for whatever bribe you can agree."},
+ {"title": "Running away", "text": "If you cannot win, roll a die. On a five or a six you escape. Otherwise the monster's Bad Stuff happens to you, exactly as its card says."},
+ {"title": "Items", "text": "You may wear one headgear, one armour and one footgear, and use two hands' worth of things. Items worth a thousand gold between them can be sold for a level, though never the tenth."},
+ {"title": "What I do not carry", "text": "The cards carry their own rules and often contradict the general ones. When they do, the card wins."}
+]

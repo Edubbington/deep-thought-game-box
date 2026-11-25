@@ -1,0 +1,18 @@
+{
+  "id": "dominoes",
+  "name": "Dominoes",
+  "blurb": "Match the ends, play out",
+  "players": [
+    2,
+    4
+  ],
+  "order": 106,
+  "trackers": [
+    {
+      "name": "Rounds won",
+      "start": 0,
+      "step": 1,
+      "min": 0
+    }
+  ]
+}

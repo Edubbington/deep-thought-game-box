@@ -1,0 +1,326 @@
+D&D
+
+
+
+
+ Dungeons & Dragons
+ What the box needs to know to teach D&D to a table that has never played, and to help
+ run a session. It covers the current rules: fifth edition as revised in the 2024 core
+ rulebooks. The basic rules are free on D&D Beyond, and the box explains them in its own
+ words.
+
+
+
+ What D&D is
+ One player is the Dungeon Master (DM). The DM describes the world and plays everyone
+ in it. Each other player runs one character. There is no board and no winner. The game is a
+ conversation:
+
+      1. The DM describes the situation.
+      2. The players say what their characters do.
+      3. When the outcome is uncertain, someone rolls a twenty-sided die.
+      4. The DM says what happens, and the loop starts again.
+
+
+ The one roll that runs the game
+ Roll a d20, add a modifier, and try to equal or beat a target number. That is called a D20
+ Test, and it comes in three kinds.
+
+
+      Kind          When                                  You roll against
+
+      Ability       You try something hard: climb,        A Difficulty Class (DC) set by the
+      check         persuade, pick a lock                 DM. 10 is easy, 15 is moderate, 20 is
+                                                          hard.
+
+      Attack roll   You try to hit something              The target's Armour Class (AC)
+
+      Saving        Something happens to you: a trap, a   A DC set by the trap or the caster
+      throw         spell, poison
+
+
+ The modifier is the bonus from one of your six abilities, plus your Proficiency Bonus if you
+ are trained in what you are doing. The Proficiency Bonus starts at +2 and rises with level.
+
+ The six abilities: Strength (muscle), Dexterity (agility), Constitution (toughness),
+ Intelligence (reasoning), Wisdom (awareness), Charisma (force of personality). A score of
+ 10 gives +0; every 2 points above or below changes the modifier by 1.
+
+
+                                                                                                  Page 1 of 7
+D&D
+
+
+
+
+ Advantage and Disadvantage. When things are in your favour, roll two d20s and keep the
+ higher. When they are against you, roll two and keep the lower. If you have both, they
+ cancel and you roll one.
+
+ Heroic Inspiration. A reward the DM hands out. Spend it to re-roll any one die.
+
+ A natural 20 on an attack always hits and is a critical hit: roll the weapon's damage dice
+ twice. A natural 1 on an attack always misses.
+
+
+ Building a character, in four choices
+      1. Class: what you do. It matters most.
+      2. Background: what you were before. It gives ability score increases, skills and a
+        starting feat.
+      3. Species: what you are. It gives a few traits.
+      4. Details: name, look, personality.
+
+
+      Class       In one line                                         Good first character?
+
+      Fighter     Weapons and armour, simple and strong               Yes, the easiest
+
+      Rogue       Sneaking, skills, one big hit per turn              Yes
+
+      Cleric      Heals, protects, fights; armour and spells          Yes
+
+      Wizard      The widest choice of spells, fragile                Yes, with some reading
+
+      Barbarian   Rage: hits hard, hard to kill                       Yes
+
+      Paladin     Armoured holy knight with burst damage              Yes
+
+      Ranger      Bows, tracking, a few spells                        Yes
+
+      Monk        Fast unarmed fighter                                Medium
+
+      Bard        Support, skills and spells through performance      Medium
+
+      Druid       Nature spells and turning into animals              Medium
+
+      Sorcerer    Innate magic, few spells used flexibly              Medium
+
+      Warlock     Magic from a pact; few spells that come back        Medium
+                  quickly
+
+
+
+
+                                                                                              Page 2 of 7
+D&D
+
+
+
+
+ Species in the 2024 rules: Aasimar, Dragonborn, Dwarf, Elf, Gnome, Goliath, Halfling,
+ Human, Orc, Tiefling.
+
+ Characters run from level 1 to level 20. You pick a subclass, a specialism within your class,
+ at level 3.
+
+
+ Combat
+ Combat runs in rounds. A round is about six seconds, and everyone gets one turn in it.
+
+ Start: everyone rolls Initiative (a d20 plus Dexterity modifier). Highest goes first. That
+ order holds for the whole fight.
+
+ On your turn you get:
+
+        Movement: up to your Speed, usually 30 feet. You can split it before and after your
+        action.
+        One action.
+        One bonus action, only if something you have says it uses one.
+        One free interaction with an object: draw a sword, open a door.
+
+ Once per round, at any time: one reaction. The common one is the Opportunity Attack, a
+ free swing at an enemy who walks out of your reach.
+
+
+      Action      What it does
+
+      Attack      Make a weapon attack or an Unarmed Strike
+
+      Magic       Cast a spell or use a magic item
+
+      Dash        Double your movement this turn
+
+      Disengage   Move away without provoking Opportunity Attacks
+
+      Dodge       Attacks against you have Disadvantage until your
+                  next turn
+
+      Help        Give an ally Advantage on their next check or
+                  attack
+
+      Hide        Try to get out of sight
+
+      Ready       Prepare an action to trigger later this round
+
+      Search      Look for something
+
+
+
+                                                                                              Page 3 of 7
+D&D
+
+
+
+
+      Action       What it does
+
+      Study        Work something out from memory or clues
+
+      Influence    Try to change a creature's attitude
+
+      Utilize      Use an object
+
+
+ Hitting and hurting. Roll a d20 plus your attack bonus. If it equals or beats the target's AC,
+ roll your weapon's damage and subtract it from the target's Hit Points.
+
+ At 0 Hit Points a character falls Unconscious and starts making Death Saving Throws at
+ the start of each turn: a plain d20, 10 or higher succeeds. Three successes and you are
+ stable. Three failures and the character dies. A natural 20 brings you back with 1 Hit Point.
+ A natural 1 counts as two failures. Any healing ends the whole business and wakes you up.
+
+
+
+ Resting
+        Short Rest: about an hour. Spend Hit Dice to heal, and some abilities come back.
+        Long Rest: about eight hours. All Hit Points and almost everything else comes back.
+
+
+ Magic in five rules
+      1. Cantrips are small spells you can cast as often as you like.
+      2. Bigger spells use spell slots. A slot is spent when you cast and comes back after a
+        Long Rest.
+      3. A spell cast in a higher slot is often stronger.
+      4. Concentration: some spells last only while you concentrate. You can concentrate on
+        one at a time, and taking damage forces a Constitution save to keep it (DC 10 or half
+        the damage, whichever is higher).
+      5. You can spend only one spell slot per turn.
+
+
+ Conditions the box should remind people of
+
+      Condition        In short
+
+      Blinded          Cannot see. Your attacks have Disadvantage;
+                       attacks against you have Advantage.
+
+
+
+                                                                                               Page 4 of 7
+D&D
+
+
+
+
+      Condition       In short
+
+      Charmed         Cannot attack the charmer, who has Advantage on
+                      social checks with you.
+
+      Deafened        Cannot hear.
+
+      Exhaustion      Comes in levels. Each level is −2 on every d20 roll
+                      and 5 feet off your Speed. Six levels kills.
+
+      Frightened      Disadvantage while you can see the source, and
+                      you cannot move closer to it.
+
+      Grappled        Speed 0. Disadvantage on attacks against anyone
+                      but the grappler.
+
+      Incapacitated   No actions, bonus actions or reactions.
+
+      Invisible       Cannot be seen. Advantage on your attacks;
+                      Disadvantage on attacks against you.
+
+      Paralyzed       Incapacitated and cannot move. Attacks against
+                      you have Advantage, and hits from within 5 feet are
+                      critical.
+
+      Petrified       Turned to stone.
+
+      Poisoned        Disadvantage on attack rolls and ability checks.
+
+      Prone           On the ground. Standing costs half your
+                      movement. Melee attacks against you have
+                      Advantage; ranged ones have Disadvantage.
+
+      Restrained      Speed 0. Your attacks have Disadvantage; attacks
+                      against you have Advantage.
+
+      Stunned         Incapacitated. Attacks against you have
+                      Advantage.
+
+      Unconscious     Out cold, prone, and hits from within 5 feet are
+                      critical.
+
+
+
+
+                                                                            Page 5 of 7
+D&D
+
+
+
+
+ What the box does at a D&D table
+        Initiative tracker. Enter names and rolls; the screen shows whose turn it is and who is
+        next. The button means "next turn".
+        Round counter and timers for effects that last a set number of rounds.
+        Condition tags on each name, with a one-line reminder when that creature's turn
+        starts.
+        Concentration marker, with the save DC worked out when damage is entered.
+        Death save tracker: three boxes each way.
+        Dice: any die, with Advantage and Disadvantage built in.
+        Rules lookup: hold the button and ask "what does Restrained do".
+        DM helpers: a random name, a quick shopkeeper, a difficulty class suggestion.
+        The voice. Deep Thought makes a patient, faintly weary DM's assistant. It announces
+        turns and never tells the DM what to rule.
+
+ It does not hold character sheets or monster statistics. Those stay on paper or on D&D
+ Beyond.
+
+
+ A first session, for a table of beginners
+      1. One person agrees to be DM. Everyone else picks from Fighter, Rogue, Cleric and
+         Wizard. The current starter set, Heroes of the Borderlands, is built around exactly
+        those four.
+      2. The box explains the d20 roll with one example each of a check, an attack and a save.
+      3. Play a short scene with no fighting: arrive somewhere, talk to someone, make two or
+        three checks.
+      4. First fight, three or four weak enemies. The box runs initiative and explains movement,
+        action and bonus action the first time each comes up.
+      5. Take a Short Rest and let the box explain healing.
+      6. Stop after about two hours, on a question.
+
+
+ Words a new player will hear
+ AC: Armour Class, how hard you are to hit. DC: Difficulty Class, the number to beat. HP:
+ Hit Points. d20, d8, 2d6: dice; 2d6 means two six-sided dice. Modifier: the number you
+ add. Proficiency: being trained. Saving throw: a roll to resist. Cantrip: a free spell. Spell
+
+
+
+                                                                                               Page 6 of 7
+D&D
+
+
+
+
+ slot: fuel for bigger spells. NPC: a character the DM plays. Session: one evening's play.
+ Campaign: the whole story.
+
+
+ Sources for this tab
+      D&D Beyond, Basic Rules (2024) and the 2024 Player's Handbook: the rules
+      summarised here.
+      D&D Beyond and Wizards Play Network, Starter Set: Heroes of the Borderlands
+      (released 16 September 2025).
+      EN World and Noble Knight Games first-look reviews of the starter set: its four
+      classes and three-part structure.
+
+
+
+
+                                                                                         Page 7 of 7
+

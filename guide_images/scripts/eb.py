@@ -1,0 +1,31 @@
+from PIL import Image, ImageDraw, ImageFont
+F="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"; FB="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+f=ImageFont.truetype(F,24); fb=ImageFont.truetype(FB,26); ft=ImageFont.truetype(FB,32)
+S=14; W,H=1760,700; im=Image.new("RGB",(W,H),(250,250,247)); d=ImageDraw.Draw(im)
+def px(y): return int((y+48)*S+350)
+def py(x): return int((90-x)*S+110)
+def box(y0,y1,x0,x1,fill): d.rectangle([px(y0),py(x1),px(y1),py(x0)],fill=fill,outline=(20,20,20),width=2)
+BLK=(20,20,20); RED=(210,40,40); ORG=(225,120,10); BLU=(40,90,180); GR=(95,95,95)
+d.text((40,22),"Looking straight down on the speaker in its slot",font=ft,fill=BLK)
+d.text((px(-46),py(88.2)),"OUTSIDE of the bell",font=f,fill=GR)
+box(-46,26,80,83,(170,170,175))
+for i in range(-5,6):
+    y=-10+i*5.5; d.rectangle([px(y-1.5),py(83)-1,px(y+1.5),py(80)+1],fill=(250,250,247))
+box(-46,26,58,62.5,(205,205,210))
+box(-24.25,4.25,64.25,79.75,(45,45,48)); d.text((px(-17),py(73.2)),"SPEAKER",font=fb,fill=(235,235,235)); d.text((px(-21.5),py(79.2)),"cone faces the grille",font=f,fill=(200,200,200))
+for a,b in ((-31.25,-24.25),(4.25,11.25)): box(a,b,70.5,73.5,(120,120,125))
+for a,b in ((-35,-24.6),(4.6,15)): box(a,b,73.5,79.7,(70,130,220))
+for y in (-27.5,7.5):
+    d.rectangle([px(y)-4,py(78.5),px(y)+4,py(70.5)],fill=RED); d.rectangle([px(y)-12,py(70.5),px(y)+12,py(69.0)],fill=RED)
+for y in (-32,12):
+    d.rectangle([px(y)-4,py(83),px(y)+4,py(75.3)],fill=ORG); d.rectangle([px(y)-12,py(84.5),px(y)+12,py(83)],fill=ORG)
+def T(t,x,y,c=BLK,font=f): d.text((x,y),t,font=font,fill=c)
+def Ln(p,q,c=BLK): d.line([p,q],fill=c,width=3)
+T("Grille wall",px(27)+16,py(82.4))
+T("2  Screw from OUTSIDE",20,py(87),ORG,fb); T("through a grille hole,",20,py(87)+34,ORG); T("into the block",20,py(87)+64,ORG); Ln((345,py(87)+16),(px(-32)-14,py(83.8)),ORG)
+T("Printed block (blue):",px(27)+16,py(78.4),BLU,fb); T("fills the gap between",px(27)+16,py(78.4)+34); T("the ear and the grille wall",px(27)+16,py(78.4)+64); Ln((px(15)+3,py(77.2)),(px(27)+10,py(77.4)),BLU)
+T("Speaker ear (grey)",px(27)+16,py(70.4)); Ln((px(11.25)+3,py(72)),(px(27)+10,py(69.6)))
+T("1  Screw from BEHIND",20,py(68),RED,fb); T("through the ear hole,",20,py(68)+34,RED); T("into the block",20,py(68)+64,RED); Ln((335,py(68)+16),(px(-27.5)-14,py(69.7)),RED)
+T("Inner wall of the slot",px(27)+16,py(61.2))
+T("INSIDE of the bell",px(-46),py(56.8),GR)
+im.save("final/earblocks.jpg",quality=90)

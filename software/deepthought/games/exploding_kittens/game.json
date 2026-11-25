@@ -1,0 +1,13 @@
+{
+  "id": "exploding_kittens",
+  "name": "Exploding Kittens",
+  "blurb": "Do not draw the kitten",
+  "players": [
+    2,
+    5
+  ],
+  "order": 109,
+  "phases": [
+    "Turn"
+  ]
+}

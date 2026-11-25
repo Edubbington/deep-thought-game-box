@@ -1,0 +1,13 @@
+{
+  "id": "monster_rejects",
+  "name": "Monster Rejects",
+  "blurb": "Rules not loaded yet",
+  "players": [
+    2,
+    5
+  ],
+  "order": 114,
+  "phases": [
+    "Turn"
+  ]
+}

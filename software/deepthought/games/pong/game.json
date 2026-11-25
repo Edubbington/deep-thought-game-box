@@ -1,0 +1,18 @@
+{
+  "id": "pong",
+  "name": "Wooden Pong",
+  "blurb": "Sink their cups first",
+  "players": [
+    2,
+    4
+  ],
+  "order": 122,
+  "trackers": [
+    {
+      "name": "Cups sunk",
+      "start": 0,
+      "step": 1,
+      "min": 0
+    }
+  ]
+}

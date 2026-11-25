@@ -1,0 +1,13 @@
+{
+  "id": "guilty_gear",
+  "name": "Guilty Gear Board Game",
+  "blurb": "Rules not loaded yet",
+  "players": [
+    2,
+    4
+  ],
+  "order": 111,
+  "phases": [
+    "Turn"
+  ]
+}

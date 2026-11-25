@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D&amp;D: add a character from a phone</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+body{margin:0}
+a{color:#6CB6FF}a:hover{color:#9CCEFF}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width: 800px; height: 480px; box-sizing: border-box; background: #0B0F14; color: #EAF0F6; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+<div style="height: 60px; flex-shrink: 0; box-sizing: border-box; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #151C26; border-bottom: 1px solid #2F3B4D">
+<div style="font-size: 22px; color: #A9B8CA">D&amp;D · Party</div>
+<div style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 24px; font-weight: 700; color: #EAF0F6">Add a character</div>
+<div style="width: 10px"></div>
+</div><div style="flex: 1; padding: 12px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="flex: 1; display: flex; gap: 20px; align-items: center">
+<div style="width: 220px; height: 220px; flex-shrink: 0; border: 2px dashed #A9B8CA; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: #A9B8CA">[QR CODE]</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 30px; font-weight: 700; line-height: 1.15">Use a phone for this part.</div>
+<div style="font-size: 22px; line-height: 1.35">1. Join the same Wi-Fi as the box.</div>
+<div style="font-size: 22px; line-height: 1.35">2. Scan the code, or open [BOX ADDRESS].</div>
+<div style="font-size: 22px; line-height: 1.35">3. Make a character, or upload a sheet as a PDF or a photo.</div>
+</div>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 14px">
+<span style="font-size: 22px; color: #A9B8CA">New sheets appear here to be checked.</span>
+<button type="button" style="width: 150px; height: 64px; box-sizing: border-box; padding: 0 20px; background: #EAF0F6; color: #0B0F14; border: 1px solid #EAF0F6; border-radius: 14px; font-size: 24px; font-weight: 600">Back</button>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":800,"height":480}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+[
+ {"title": "The aim", "text": "Take all of the other player's pieces, or leave them with no move they can make."},
+ {"title": "Setting up", "text": "Use only the dark squares. Each player puts twelve pieces on the dark squares of the three rows nearest them. The darker colour moves first."},
+ {"title": "Moving", "text": "A piece moves one square diagonally forward onto an empty dark square."},
+ {"title": "Jumping", "text": "If one of their pieces is diagonally next to yours with an empty square straight behind it, you jump over it and take it off the board. If that piece can jump again from where it lands, it carries on in the same turn.\n\nWhen a jump is there to be made, you must make one."},
+ {"title": "Kings", "text": "A piece that reaches the far row is crowned: stack a second piece on it. A king moves and jumps diagonally backward as well as forward."}
+]

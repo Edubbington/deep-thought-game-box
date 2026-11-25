@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "Win in either of two ways: slay three monsters, or gather a full party of six different classes. Your party leader counts as one of them. The Here to Sleigh box shuffles in with this and changes none of what follows."},
+ {"title": "Setting up", "text": "Each player chooses a party leader and is dealt five cards. Turn three monsters face up in the middle."},
+ {"title": "A turn", "text": "You have three action points. One point: draw a card, or play a hero, item or magic card from your hand, or roll to use a hero's effect. Two points: attack a monster. Three points: discard your whole hand and draw five.\n\nEach hero's effect may be tried once a turn."},
+ {"title": "Rolling", "text": "Hero effects and monster attacks are rolled on two dice. A hero's card says what you need. Modifier cards can be played by anyone to push any roll up or down, which is where the arguments start."},
+ {"title": "Challenges", "text": "When someone plays a hero, item or magic card, another player may spend a Challenge card. Both roll two dice. If the challenger rolls higher, the card is discarded instead of played."},
+ {"title": "Monsters", "text": "Each monster lists the heroes your party needs before you may attack it, and the roll that slays it. Roll low enough and it punishes you instead. A slain monster sits beside your leader and gives you a lasting advantage."}
+]

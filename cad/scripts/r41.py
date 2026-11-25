@@ -1,0 +1,11 @@
+import sys; sys.path.insert(0,'/home/claude/build')
+src=open('/home/claude/build/guide_render.py').read().split("# ---------- 1. print bed")[0].replace('s5.blend','s6b.blend').replace('"P_Head")','"P_HeadBell")').replace('"P_Head":(0.75','"P_HeadBell":(0.75')
+exec(src)
+P=bpy.data.objects["P_Chin"]; P.color=(0.62,0.66,0.72,1)
+P.rotation_euler=(math.radians(180),0,0)
+shot("chin41_under",["P_Chin"],(0.3,-0.8,1),labels=[("Clearance pocket for a core boss (3)",(-55.8,68.1,-96)),("Magnet pocket in the roof of the clearance pocket",(56.7,70.2,-100)),("Wire hole over the core's neck channel",(0,-12,-96))],zoom=1.1)
+P.rotation_euler=(0,0,0)
+shot("chin41_top",["P_Chin"],(0.3,-0.8,1),labels=[("Lip: drops inside the bell wall, 0.4 mm clearance",(0,-70,107)),("Floor is 8.6 mm thick inside the bell",(30,-30,104.6)),("Screw pilot (3)",(-62,-73,104.5))],zoom=1.1)
+C_=bpy.data.objects["P_Core"]; 
+pc=half("P_Chin",(-55.8,0,0),(1,0,0),keep_pos=True); cc=half("P_Core",(-55.8,0,0),(1,0,0),keep_pos=True)
+shot("chin41_fit",[pc,cc],(-1,-0.3,0.25),W=1100,H=700,zoom=0.7,center=Vector((0,-20,95)),labels=[("Core boss rises 4 mm into the plate's clearance pocket",(-55.8,-68.1,98)),("Core magnet (top of the boss)",(-55.8,-68.1,99)),("Plate magnet, 0.4 mm above it",(-55.8,-68.1,102)),("Plate underside sits flat on the core top",(-20,-60,96))])

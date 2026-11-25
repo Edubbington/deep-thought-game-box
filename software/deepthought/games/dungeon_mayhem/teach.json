@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "Each player is an adventurer with their own deck and ten hit points. Knock the others out. The last one standing wins."},
+ {"title": "Setting up", "text": "Pick a character and take its deck and hit point tracker, set to ten. Shuffle your deck and draw three cards. The Monster Madness box adds six more characters and lets up to six play."},
+ {"title": "A turn", "text": "Draw one card, then play one card. Do everything the symbols on it show."},
+ {"title": "The symbols", "text": "Sword: one damage to an opponent of your choice. Shield: this card stays in front of you and soaks up that many damage before you are hurt. Heart: heal one, never above ten. Card: draw one. Lightning: play one more card this turn.\n\nA card with a name and a picture instead is your character's own power. It says what it does."},
+ {"title": "Running dry", "text": "If you start your turn with no cards in hand, draw two instead of one. When your deck is empty, shuffle your discards to make a new one."},
+ {"title": "Keeping count", "text": "The hit points on screen start at ten. Flip the Tap button to minus and tap a name to take one away."}
+]

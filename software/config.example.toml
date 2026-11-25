@@ -1,0 +1,21 @@
+# Deep Thought's keys. Copy this file to config.toml and fill it in.
+# config.toml is never put in git. Without it she still works: lines show on
+# screen, questions are typed, and answers come from the library on the box.
+
+[claude]
+# Answers to spoken or typed questions, in her voice.
+# Get a key at https://platform.claude.com  (or set the ANTHROPIC_API_KEY environment variable instead)
+api_key = ""
+model = "claude-haiku-5-5"        # small and cheap; "claude-sonnet-5-5" or "claude-opus-5-5" for deeper answers
+
+[speech]
+# Her spoken voice (text to speech) and her ears (speech to text).
+# Any service that offers the OpenAI-style /audio/speech and /audio/transcriptions addresses works.
+api_key = ""
+base_url = "https://api.openai.com/v1"
+tts_model = "gpt-4o-mini-tts"
+tts_voice = "nova"                # her voice; the rest of its shaping (tts_style, tts_pitch, tts_pauses, tts_metal, tts_hall, tts_press) has defaults in voice.py
+stt_model = "whisper-1"
+
+[limits]
+monthly_dollars = 5.0             # past this she stops using the cloud until next month

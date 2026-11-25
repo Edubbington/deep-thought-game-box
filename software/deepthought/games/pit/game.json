@@ -1,0 +1,22 @@
+{
+  "id": "pit",
+  "name": "Pit",
+  "blurb": "Corner the market, loudly",
+  "players": [
+    3,
+    6
+  ],
+  "order": 116,
+  "trackers": [
+    {
+      "name": "Points",
+      "start": 0,
+      "step": 5,
+      "min": null
+    }
+  ],
+  "win": {
+    "tracker": "Points",
+    "at": 500
+  }
+}

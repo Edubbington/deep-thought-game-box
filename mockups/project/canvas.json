@@ -1,0 +1,308 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-21T03:25:34Z"
+ },
+ "title": "Deep Thought \u2014 Screen Mockups",
+ "launch": {
+  "view": "canvas"
+ },
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Home"
+  },
+  "PickGame.dc.html": {
+   "x": 880,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Pick a game"
+  },
+  "Setup.dc.html": {
+   "x": 1760,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Game setup"
+  },
+  "GameOver.dc.html": {
+   "x": 2640,
+   "y": 0,
+   "w": 800,
+   "h": 480,
+   "title": "Game over"
+  },
+  "Play.dc.html": {
+   "x": 0,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Play: main screen"
+  },
+  "Scoreboard.dc.html": {
+   "x": 880,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Play: scoreboard"
+  },
+  "ScoreSheet.dc.html": {
+   "x": 1760,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Play: end-of-round score sheet"
+  },
+  "TeachStep.dc.html": {
+   "x": 2640,
+   "y": 900,
+   "w": 800,
+   "h": 480,
+   "title": "Teach mode: one step"
+  },
+  "Ask.dc.html": {
+   "x": 0,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Ask: listening"
+  },
+  "Lookup.dc.html": {
+   "x": 880,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Lookup: answer card"
+  },
+  "Encyclopedia.dc.html": {
+   "x": 1760,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Encyclopedia: a faction"
+  },
+  "Dice.dc.html": {
+   "x": 2640,
+   "y": 1800,
+   "w": 800,
+   "h": 480,
+   "title": "Dice roller"
+  },
+  "W40kPlay.dc.html": {
+   "x": 0,
+   "y": 2700,
+   "w": 800,
+   "h": 480,
+   "title": "40k: main play screen"
+  },
+  "W40kScore.dc.html": {
+   "x": 880,
+   "y": 2700,
+   "w": 800,
+   "h": 480,
+   "title": "40k: scoring in the Command phase"
+  },
+  "W40kRef.dc.html": {
+   "x": 1760,
+   "y": 2700,
+   "w": 800,
+   "h": 480,
+   "title": "40k: reference card (wound roll)"
+  },
+  "W40kArmy.dc.html": {
+   "x": 2640,
+   "y": 2700,
+   "w": 800,
+   "h": 480,
+   "title": "40k: your army tracker"
+  },
+  "DndInit.dc.html": {
+   "x": 0,
+   "y": 3600,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: initiative tracker"
+  },
+  "DndCombatant.dc.html": {
+   "x": 880,
+   "y": 3600,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: one character in a fight"
+  },
+  "DndCampaign.dc.html": {
+   "x": 1760,
+   "y": 3600,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: Dungeon Master campaign screen"
+  },
+  "DndLookup.dc.html": {
+   "x": 2640,
+   "y": 3600,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: rules lookup card"
+  },
+  "MtgLife.dc.html": {
+   "x": 0,
+   "y": 4500,
+   "w": 800,
+   "h": 480,
+   "title": "Magic: two-player life totals"
+  },
+  "MtgCommander.dc.html": {
+   "x": 880,
+   "y": 4500,
+   "w": 800,
+   "h": 480,
+   "title": "Magic: Commander, four players"
+  },
+  "MtgCmdDamage.dc.html": {
+   "x": 1760,
+   "y": 4500,
+   "w": 800,
+   "h": 480,
+   "title": "Magic: commander damage for one player"
+  },
+  "MtgCard.dc.html": {
+   "x": 2640,
+   "y": 4500,
+   "w": 800,
+   "h": 480,
+   "title": "Magic: card lookup"
+  },
+  "DndParty.dc.html": {
+   "x": 0,
+   "y": 5400,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: the party"
+  },
+  "DndPhone.dc.html": {
+   "x": 880,
+   "y": 5400,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: add a character from a phone"
+  },
+  "DndSheet.dc.html": {
+   "x": 1760,
+   "y": 5400,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: character sheet"
+  },
+  "DndGear.dc.html": {
+   "x": 2640,
+   "y": 5400,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: gear and coins"
+  },
+  "DndLevelUp.dc.html": {
+   "x": 3520,
+   "y": 5400,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: level up"
+  },
+  "DndImport.dc.html": {
+   "x": 4400,
+   "y": 5400,
+   "w": 800,
+   "h": 480,
+   "title": "D&D: check an uploaded sheet"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "PickGame.dc.html",
+  "Setup.dc.html",
+  "GameOver.dc.html",
+  "Play.dc.html",
+  "Scoreboard.dc.html",
+  "ScoreSheet.dc.html",
+  "TeachStep.dc.html",
+  "Ask.dc.html",
+  "Lookup.dc.html",
+  "Encyclopedia.dc.html",
+  "Dice.dc.html",
+  "W40kPlay.dc.html",
+  "W40kScore.dc.html",
+  "W40kRef.dc.html",
+  "W40kArmy.dc.html",
+  "DndInit.dc.html",
+  "DndCombatant.dc.html",
+  "DndCampaign.dc.html",
+  "DndLookup.dc.html",
+  "MtgLife.dc.html",
+  "MtgCommander.dc.html",
+  "MtgCmdDamage.dc.html",
+  "MtgCard.dc.html",
+  "DndParty.dc.html",
+  "DndPhone.dc.html",
+  "DndSheet.dc.html",
+  "DndGear.dc.html",
+  "DndLevelUp.dc.html",
+  "DndImport.dc.html"
+ ],
+ "notes": {
+  "row0": {
+   "x": 0,
+   "y": -260,
+   "text": "Start and finish",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row1": {
+   "x": 0,
+   "y": 640,
+   "text": "Kill Team: during a game",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row2": {
+   "x": 0,
+   "y": 1540,
+   "text": "Asking and looking things up",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row3": {
+   "x": 0,
+   "y": 2440,
+   "text": "Warhammer 40,000",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row4": {
+   "x": 0,
+   "y": 3340,
+   "text": "Dungeons & Dragons",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row5": {
+   "x": 0,
+   "y": 4240,
+   "text": "Magic: The Gathering",
+   "kind": "title1",
+   "maxW": 3440
+  },
+  "row6": {
+   "x": 0,
+   "y": 5140,
+   "text": "Dungeons & Dragons: characters",
+   "kind": "title1",
+   "maxW": 5200
+  }
+ },
+ "designSystems": []
+}

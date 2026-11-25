@@ -1,0 +1,14 @@
+{
+  "id": "clank",
+  "name": "Clank!",
+  "blurb": "Steal treasure, dodge dragon",
+  "players": [
+    2,
+    4
+  ],
+  "order": 104,
+  "phases": [
+    "Play cards",
+    "Move, buy, fight"
+  ]
+}

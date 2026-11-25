@@ -1,0 +1,8 @@
+[
+ {"title": "The aim", "text": "Somewhere in the deck are Exploding Kittens. Draw one without a Defuse and you are out. The last player left wins. This covers the ordinary box and the ruder one: the rules are the same, only the pictures differ."},
+ {"title": "Setting up", "text": "Take the Exploding Kittens and the Defuses out of the deck. Deal seven cards to each player, then give each a Defuse, so everyone holds eight.\n\nPut back one Exploding Kitten fewer than there are players. Shuffle the spare Defuses in as well: with two or three players, only two of them."},
+ {"title": "A turn", "text": "Play as many cards as you like, one at a time, or none at all. Then end your turn by drawing the top card. Drawing is the dangerous part."},
+ {"title": "Exploding and defusing", "text": "Draw an Exploding Kitten and you must show it. With a Defuse, play it, then slide the Kitten back into the deck anywhere you like, in secret. Without one, you are out."},
+ {"title": "The action cards", "text": "Skip: end your turn without drawing. Attack: end your turn without drawing, and the next player takes two turns. Shuffle: shuffle the deck. See the Future: look at the top three cards. Favor: another player gives you a card of their choice.\n\nNope: stops any action as it is played, though not a Kitten or a Defuse. A Nope can be Noped."},
+ {"title": "Cat cards", "text": "The cats with no instructions do nothing alone. Play two the same to take a random card from another player's hand. Play three the same to name a card: if that player has it, it is yours."}
+]

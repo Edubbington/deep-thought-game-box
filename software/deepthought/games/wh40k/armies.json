@@ -1,0 +1,16 @@
+{
+ "necrons": {
+  "label": "Necrons",
+  "units": [
+   {"name": "Necron Warriors", "size": 20},
+   {"name": "Overlord", "size": 1},
+   {"name": "Royal Warden", "size": 1},
+   {"name": "Lychguard", "size": 5},
+   {"name": "Triarch Praetorians", "size": 5},
+   {"name": "Canoptek Doomstalker", "size": 1},
+   {"name": "Scarab Swarms, first", "size": 3},
+   {"name": "Scarab Swarms, second", "size": 3},
+   {"name": "C'tan Void Dragon", "size": 1}
+  ]
+ }
+}
